@@ -1,0 +1,24 @@
+:root {
+	--home-background: #4a536b;
+	--red-text: #ff9a8d;
+	--white-text: #ffffff;
+	--gray-text: #d5d5d5;
+	--dark-gray-text: #9b9b9b;
+	--icons-colors: #aed6dc;
+	--active-red-background-linear: linear-gradient(
+		180deg,
+		rgba(255, 154, 141, 0) 0%,
+		rgba(255, 154, 141, 0.38) 89.06%,
+		rgba(255, 154, 141, 0.51) 100%
+	);
+	--person-icon: #2b303e;
+	--black-background: #252525;
+	--second-black-background: #292929;
+	--active-skill-green: #1e847f;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
