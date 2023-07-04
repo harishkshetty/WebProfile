@@ -19,7 +19,9 @@ const SytledlinksItems = styled.a`
 `;
 const Nav = () => {
 	return (
-		<Box className="navContainer">
+		<Box
+			className="navContainer"
+			sx={{ backgroundColor: 'var(--home-background)' }}>
 			<Stack
 				direction="row"
 				sx={{

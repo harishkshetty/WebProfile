@@ -12,6 +12,7 @@ const Home = () => {
 			<Stack
 				direction="row"
 				alignItems={'center'}
+				justifyContent={'center'}
 				sx={{
 					gap: '3rem',
 					paddingLeft: '8rem',
@@ -37,6 +38,10 @@ const Home = () => {
 
 				<Box className="personalImage">
 					<img
+						style={{
+							filter: 'drop-shadow(2px 4px 12px rgba(0,0,0,0.50))',
+							width: '100%',
+						}}
 						src={PersonalImage}
 						alt="Hossam Mahmoud"
 					/>

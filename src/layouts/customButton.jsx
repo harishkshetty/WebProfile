@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 const StyledButton = styled(Button)`
+	position: relative;
 	border: 1px solid var(--red-text);
 	width: fit-content;
 	border-radius: 12px;
@@ -11,10 +12,28 @@ const StyledButton = styled(Button)`
 	padding: 1rem 4rem;
 	text-transform: none;
 	font-size: 1.2rem;
+	z-index: 0;
+	background-color: transparent;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 0;
+		height: 100%;
+		border-radius: 12px;
+		z-index: -1;
+		background-color: var(--red-text);
+		transition: all 0.2s ease-in-out;
+	}
 
 	&:hover {
-		background-color: var(--red-text);
 		color: #000000;
+	}
+
+	&:hover::before {
+		width: 100%;
 	}
 `;
 const CustomButton = ({ content }) => {
@@ -22,6 +41,3 @@ const CustomButton = ({ content }) => {
 };
 
 export default CustomButton;
-
-// variant="outlined"
-//sx={{ width: 'fit-content' }}>
