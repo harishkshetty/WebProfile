@@ -17,6 +17,7 @@
 
 	/* backgrounds colors */
 	--home-background: #4a536b;
+	/* --home-background: linear-gradient(180deg, #4a536b, #252525); */
 	--active-red-background-linear: linear-gradient(
 		180deg,
 		rgba(255, 154, 141, 0) 0%,

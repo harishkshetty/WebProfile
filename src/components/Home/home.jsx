@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import Nav from '../nav/nav';
 import PersonalImage from '../../assets/images/IMG_yphqhh222-removebg.png';
@@ -6,8 +6,8 @@ import CustomButton from '../../layouts/customButton';
 const Home = () => {
 	return (
 		<Box
-			className="container"
-			sx={{ backgroundColor: 'var(--home-background)' }}>
+			className="home container"
+			sx={{ background: 'var(--home-background)' }}>
 			<Nav />
 			<Stack
 				direction="row"
@@ -32,7 +32,13 @@ const Home = () => {
 						</Typography>
 					</Stack>
 					<a href="mailto:hossamkheder9999@gmail.com">
-						<CustomButton content="Get in touch" />
+						<CustomButton
+							beforeWidth={'0%'}
+							beforeBgColorHover="var(--red-text)"
+							hoverColor="black"
+							textColor="var(--white-text)"
+							content="Get in touch"
+						/>
 					</a>
 				</Stack>
 

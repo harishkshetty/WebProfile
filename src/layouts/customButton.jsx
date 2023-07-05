@@ -7,7 +7,7 @@ const StyledButton = styled(Button)`
 	border: 1px solid var(--red-text);
 	width: fit-content;
 	border-radius: 12px;
-	color: #ffffff;
+	color: ${(props) => props.textColor};
 	font-weight: 700;
 	padding: 1rem 4rem;
 	text-transform: none;
@@ -20,7 +20,7 @@ const StyledButton = styled(Button)`
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 0;
+		width: ${(props) => props.beforeWidth};
 		height: 100%;
 		border-radius: 12px;
 		z-index: -1;
@@ -29,15 +29,30 @@ const StyledButton = styled(Button)`
 	}
 
 	&:hover {
-		color: #000000;
+		color: ${(props) => props.hoverColor};
 	}
 
 	&:hover::before {
 		width: 100%;
+		background-color: ${(props) => props.beforeBgColorHover};
 	}
 `;
-const CustomButton = ({ content }) => {
-	return <StyledButton>{content}</StyledButton>;
+const CustomButton = ({
+	content,
+	textColor,
+	beforeWidth,
+	beforeBgColorHover,
+	hoverColor,
+}) => {
+	return (
+		<StyledButton
+			beforeWidth={beforeWidth}
+			beforeBgColorHover={beforeBgColorHover}
+			hoverColor={hoverColor}
+			sx={{ color: textColor }}>
+			{content}
+		</StyledButton>
+	);
 };
 
 export default CustomButton;

@@ -1,3 +1,22 @@
 .red-text {
 	color: var(--red-text);
 }
+
+.gray-text {
+	color: var(--gray-text);
+}
+
+.white-text {
+	color: var(--white-text);
+}
+.home.container {
+	padding: 0;
+}
+.container {
+	padding: 0 12rem 6rem;
+	height: 100vh;
+}
+
+.black-container {
+	background-color: var(--black-background);
+}
