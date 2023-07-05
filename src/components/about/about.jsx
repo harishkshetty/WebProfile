@@ -21,7 +21,10 @@ const CustomizeStack = styled(Stack)`
 const About = () => {
 	return (
 		<Box className="about container black-container">
-			<Heading headerText="About me" />
+			<Heading
+				headerText="About me"
+				id="about"
+			/>
 			<Stack
 				direction="row"
 				justifyContent="space-between"

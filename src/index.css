@@ -20,12 +20,15 @@
 	/* --home-background: linear-gradient(180deg, #4a536b, #252525); */
 	--active-red-background-linear: linear-gradient(
 		180deg,
-		rgba(255, 154, 141, 0) 0%,
-		rgba(255, 154, 141, 0.38) 89.06%,
-		rgba(255, 154, 141, 0.51) 100%
+		#ff9a8d00 0%,
+		#ff9a8d61 89.06%,
+		#ff9a8d82 100%
 	);
 	--black-background: #252525;
 	--second-black-background: #292929;
+	--gray-background: #4a536b7a;
+
+	--red-shadow: 0px 0px 27px -6px #ff9a8d;
 }
 
 * {
@@ -34,6 +37,10 @@
 	box-sizing: border-box;
 	font-family: 'Rubik', sans-serif;
 	/* font-family: 'PT Mono', monospace; */
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 a {

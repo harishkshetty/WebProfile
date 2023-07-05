@@ -20,3 +20,7 @@
 .black-container {
 	background-color: var(--black-background);
 }
+
+.second-black-container {
+	background-color: var(--second-black-background);
+}

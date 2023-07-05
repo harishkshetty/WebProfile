@@ -6,6 +6,7 @@ import CustomButton from '../../layouts/customButton';
 const Home = () => {
 	return (
 		<Box
+			id="home"
 			className="home container"
 			sx={{ background: 'var(--home-background)' }}>
 			<Nav />

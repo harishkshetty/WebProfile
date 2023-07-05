@@ -43,10 +43,13 @@ const Nav = () => {
 
 				<Sytledlinks>
 					<li>
-						<SytledlinksItems href="#">Home</SytledlinksItems>
+						<SytledlinksItems href="#home">Home</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">About me</SytledlinksItems>
+						<SytledlinksItems href="#about">About me</SytledlinksItems>
+					</li>
+					<li>
+						<SytledlinksItems href="#services">Services</SytledlinksItems>
 					</li>
 					<li>
 						<SytledlinksItems href="#">Experience & Education</SytledlinksItems>

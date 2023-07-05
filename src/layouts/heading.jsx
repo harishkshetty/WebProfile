@@ -22,12 +22,13 @@ const StyledHeading = styled(Typography)`
 		background-color: var(--icons-colors);
 	}
 `;
-const Heading = ({ headerText }) => {
+const Heading = ({ headerText, id }) => {
 	return (
 		<Stack
 			className="heading"
 			justifyContent="center"
-			direction="row">
+			direction="row"
+			id={id}>
 			<StyledHeading variant="h2">{headerText}</StyledHeading>
 		</Stack>
 	);
