@@ -10,7 +10,10 @@ import { ReactComponent as EducationIcon } from '../../assets/icons/graduation-c
 const Exed = () => {
 	const items = [
 		<ExperienceIcon className="back-icon" />,
-		<EducationIcon className="back-icon" />,
+		<EducationIcon
+			className="back-icon"
+			style={{ right: '-55%', top: '-68%' }}
+		/>,
 	];
 
 	// The status value
@@ -158,20 +161,33 @@ const Exed = () => {
 					</Typography>
 					<Typography
 						variant="body2"
-						sx={{ marginBottom: '1rem' }}>
-						{chosenElement.about.info}
-					</Typography>
+						sx={{
+							marginBottom: '1rem',
+							letterSpacing: '1.3px',
+							lineHeight: '1.6',
+						}}
+						dangerouslySetInnerHTML={{
+							__html: chosenElement.about.info,
+						}}></Typography>
 					<Typography
 						variant="h6"
 						sx={{ fontWeight: '500' }}>
 						{chosenElement.about.subTitle}
 					</Typography>
 
-					<ul style={{ marginLeft: '3rem' }}>
+					<ul
+						style={{
+							marginLeft: '3rem',
+							lineHeight: '1.6',
+						}}>
 						{chosenElement.about.list.map((item) => {
 							return (
 								<li>
-									<Typography variant="body2">{item}</Typography>
+									<Typography
+										variant="body2"
+										letterSpacing="1.3px">
+										{item}
+									</Typography>
 								</li>
 							);
 						})}
