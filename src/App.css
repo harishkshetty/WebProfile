@@ -33,3 +33,13 @@ div.activeBox {
 		rgba(255, 154, 141, 0.51) 100%
 	);
 }
+
+.back-icon {
+	position: absolute;
+	right: -55%;
+	top: -53%;
+	z-index: -1;
+	transform: scale(0.2);
+	fill: var(--icons-colors);
+	opacity: 0.1;
+}

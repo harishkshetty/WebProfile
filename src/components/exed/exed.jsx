@@ -4,7 +4,15 @@ import Heading from '../../layouts/heading';
 import styled from '@emotion/styled';
 import { exData } from '../../data/experienceData';
 import { edData } from '../../data/educationData';
+import { ReactComponent as ExperienceIcon } from '../../assets/icons/laptop-code-solid.svg';
+import { ReactComponent as EducationIcon } from '../../assets/icons/graduation-cap-solid.svg';
+
 const Exed = () => {
+	const items = [
+		<ExperienceIcon className="back-icon" />,
+		<EducationIcon className="back-icon" />,
+	];
+
 	// The status value
 	const [status, setStatus] = useState('experience');
 
@@ -13,6 +21,8 @@ const Exed = () => {
 
 	// The chosen object to show its values
 	const [chosenElement, setchosenElement] = useState(data[0]);
+
+	const [item, setItem] = useState(0);
 
 	// Change the stauts value
 	const handleClick = (e) => {
@@ -23,6 +33,7 @@ const Exed = () => {
 			setStatus('education');
 			setData(edData);
 			setchosenElement(edData[0]);
+			setItem(1);
 		} else if (
 			status === 'education' &&
 			e.currentTarget.textContent === 'Experience'
@@ -30,9 +41,8 @@ const Exed = () => {
 			setStatus('experience');
 			setData(exData);
 			setchosenElement(exData[0]);
+			setItem(0);
 		}
-
-		console.log(status);
 	};
 
 	// Active the clicked item and set the chosen object
@@ -52,7 +62,11 @@ const Exed = () => {
 	};
 
 	return (
-		<Box className="exed container black-container">
+		<Box
+			className="exed container black-container"
+			position="relative"
+			zIndex="1">
+			{items[item]}
 			<Stack
 				justifyContent="space-between"
 				alignItems="center"
