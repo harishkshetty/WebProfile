@@ -9,9 +9,11 @@ const StyledHeading = styled(Typography)`
 		color: var(--white-text);
 		padding-top: 3.4rem;
 		margin-bottom: 5rem;
+		letter-spacing: 5px;
 	}
 
 	&::after {
+		${(props) => (props.exed ? 'display: none;' : 'display: block;')}
 		content: '';
 		position: absolute;
 		left: 50%;
@@ -22,14 +24,20 @@ const StyledHeading = styled(Typography)`
 		background-color: var(--icons-colors);
 	}
 `;
-const Heading = ({ headerText, id }) => {
+
+const Heading = ({ headerText, id, justify, exed, restprops }) => {
 	return (
 		<Stack
 			className="heading"
-			justifyContent="center"
+			justifyContent={!justify ? 'center' : justify}
 			direction="row"
+			{...restprops}
 			id={id}>
-			<StyledHeading variant="h2">{headerText}</StyledHeading>
+			<StyledHeading
+				exed={exed}
+				variant="h2">
+				{headerText}
+			</StyledHeading>
 		</Stack>
 	);
 };

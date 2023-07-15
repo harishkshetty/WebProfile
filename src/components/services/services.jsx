@@ -6,7 +6,7 @@ import { styled } from 'styled-components';
 
 const StyledStack = styled(Stack)`
 	&& {
-		padding: 4rem 6rem;
+		padding: 4rem 5rem;
 		align-items: center;
 		text-align: center;
 		gap: 2rem;
@@ -38,7 +38,7 @@ const Services = () => {
 							<Typography
 								variant="body1"
 								lineHeight="2"
-								sx={{ color: 'var(--dark-gray-text)' }}>
+								sx={{ color: 'var(--dark-gray-text)', letterSpacing: '2px' }}>
 								{el.explain}
 							</Typography>
 						</StyledStack>

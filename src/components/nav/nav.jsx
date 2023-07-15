@@ -20,6 +20,7 @@ const SytledlinksItems = styled.a`
 const Nav = () => {
 	return (
 		<Box
+			component="nav"
 			className="navContainer"
 			sx={{ backgroundColor: 'var(--home-background)' }}>
 			<Stack
@@ -52,7 +53,9 @@ const Nav = () => {
 						<SytledlinksItems href="#services">Services</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">Experience & Education</SytledlinksItems>
+						<SytledlinksItems href="#exed">
+							Experience & Education
+						</SytledlinksItems>
 					</li>
 					<li>
 						<SytledlinksItems href="#">My work</SytledlinksItems>

@@ -13,8 +13,8 @@
 	padding: 0;
 }
 .container {
-	padding: 0 12rem 6rem;
-	height: 100vh;
+	padding: 0 12rem 7.2rem;
+	/* height: 100vh; */
 }
 
 .black-container {
@@ -23,4 +23,13 @@
 
 .second-black-container {
 	background-color: var(--second-black-background);
+}
+
+div.activeBox {
+	background: linear-gradient(
+		180deg,
+		rgba(255, 154, 141, 0) 0%,
+		rgba(255, 154, 141, 0.38) 89.06%,
+		rgba(255, 154, 141, 0.51) 100%
+	);
 }

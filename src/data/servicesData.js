@@ -3,6 +3,7 @@ export const data = [
 		id: 1,
 		icon: (
 			<svg
+				style={{ transform: 'scale(1.5)' }}
 				width="53"
 				height="40"
 				viewBox="0 0 53 40"
@@ -27,9 +28,9 @@ export const data = [
 		icon: (
 			<svg
 				style={{
-					transform: 'scale(1.3)',
+					transform: 'scale(1.8)',
 					marginTop: '0px',
-					marginBottom: '8px',
+					marginBottom: '9px',
 				}}
 				width="35"
 				height="31"
