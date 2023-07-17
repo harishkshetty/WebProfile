@@ -58,7 +58,7 @@ const Nav = () => {
 						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">My work</SytledlinksItems>
+						<SytledlinksItems href="#work">My work</SytledlinksItems>
 					</li>
 					<li>
 						<SytledlinksItems href="#">Skills</SytledlinksItems>

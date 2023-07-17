@@ -14,6 +14,7 @@ const StyledButton = styled(Button)`
 	font-size: 1.2rem;
 	z-index: 0;
 	background-color: transparent;
+	transition: all 0.2s linear !important;
 
 	&::before {
 		content: '';
@@ -25,7 +26,7 @@ const StyledButton = styled(Button)`
 		border-radius: 12px;
 		z-index: -1;
 		background-color: var(--red-text);
-		transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out !important;
 	}
 
 	&:hover {
