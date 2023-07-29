@@ -64,10 +64,12 @@ const Nav = () => {
 						<SytledlinksItems href="#skills">Skills</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">Testimonials</SytledlinksItems>
+						<SytledlinksItems href="#testimonials">
+							Testimonials
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">Contact</SytledlinksItems>
+						<SytledlinksItems href="#contact">Contact</SytledlinksItems>
 					</li>
 				</Sytledlinks>
 			</Stack>
