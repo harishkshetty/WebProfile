@@ -10,7 +10,6 @@ const icons = {
 		<CSS
 			width={width}
 			height={height}
-			fill="var(--icons-colors)"
 		/>
 	),
 	javascript: '',
@@ -18,7 +17,6 @@ const icons = {
 		<ReactIcon
 			width={width}
 			height={height}
-			fill="var(--icons-colors)"
 		/>
 	),
 	mui: (
@@ -26,7 +24,6 @@ const icons = {
 			width={width}
 			height={height}
 			transform="scale(0.8)"
-			fill="var(--icons-colors)"
 		/>
 	),
 	axios: (
@@ -34,7 +31,6 @@ const icons = {
 			width={width}
 			height={height}
 			transform="scale(4.5)"
-			fill="var(--icons-colors)"
 		/>
 	),
 };

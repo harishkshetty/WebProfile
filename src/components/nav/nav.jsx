@@ -61,7 +61,7 @@ const Nav = () => {
 						<SytledlinksItems href="#work">My work</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#">Skills</SytledlinksItems>
+						<SytledlinksItems href="#skills">Skills</SytledlinksItems>
 					</li>
 					<li>
 						<SytledlinksItems href="#">Testimonials</SytledlinksItems>
