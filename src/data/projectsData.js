@@ -48,7 +48,7 @@ export const projData = [
 	},
 	{
 		id: 2,
-		name: 'Architecture Engineer Portfolio ',
+		name: 'Portfolio Website',
 		describtion:
 			'Explore the comprehensive portfolio website of an accomplished Architecture Engineer, showcasing her diverse skill set, extensive experience, and notable educational background.',
 		languages: [icons.react, icons.css],

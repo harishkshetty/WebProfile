@@ -43,3 +43,9 @@ div.activeBox {
 	fill: var(--icons-colors);
 	opacity: 0.1;
 }
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 2rem 4rem;
+	}
+}

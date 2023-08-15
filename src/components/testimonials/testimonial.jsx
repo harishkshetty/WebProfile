@@ -44,6 +44,11 @@ const StyledArrow = css`
 		fill: var(--gray-text);
 		width: 90%;
 	}
+	@media (max-width: 576px) {
+		&& {
+			width: 75%;
+		}
+	}
 `;
 
 const StyledLeftArrow = styled(LeftArrow)`
@@ -56,10 +61,16 @@ const StyledRightArrow = styled(RightArrow)`
 const LeftButton = styled(Button)`
 	${StyledButton}
 	left: 20%;
+	@media (max-width: 576px) {
+		left: 3%;
+	}
 `;
 const RightButton = styled(Button)`
 	${StyledButton}
 	right: 20%;
+	@media (max-width: 576px) {
+		right: 3%;
+	}
 `;
 const Testimonials = () => {
 	const [activeElement, setActiveElement] = useState(0);
@@ -79,7 +90,6 @@ const Testimonials = () => {
 		} else {
 			setActiveElement(0);
 		}
-		console.log(activeElement);
 	};
 	return (
 		<Box

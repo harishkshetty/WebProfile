@@ -16,6 +16,9 @@ const CustomizeStack = styled(Stack)`
 		width: 1px;
 		height: 125%;
 		background-color: var(--white-text);
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 `;
 const About = () => {
@@ -26,16 +29,21 @@ const About = () => {
 				id="about"
 			/>
 			<Stack
-				direction="row"
+				sx={{
+					flexDirection: { xs: 'column', md: 'row' },
+				}}
 				justifyContent="space-between"
 				marginY={3}>
 				<Stack
 					spacing={5}
 					justifyContent="space-between"
-					width="60%">
+					sx={{
+						width: { xs: '100%', md: '60%' },
+						alignItems: { xs: 'center', sm: 'flex-start' },
+					}}>
 					<Typography
 						variant="body1"
-						fontSize="20px"
+						sx={{ fontSize: { xs: '16px', md: '20px' } }}
 						className="gray-text">
 						<h3>
 							Hello, I'm Hossam<span>👋</span>
@@ -67,6 +75,7 @@ const About = () => {
 				</Stack>
 				<CustomizeStack
 					spacing={7}
+					sx={{ display: { xs: 'none', md: 'flex' } }}
 					justifyContent="center">
 					{data.map((el) => {
 						return (

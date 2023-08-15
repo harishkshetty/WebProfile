@@ -10,6 +10,15 @@ const StyledHeading = styled(Typography)`
 		padding-top: 3.4rem;
 		margin-bottom: 5rem;
 		letter-spacing: 5px;
+
+		@media (max-width: 768px) {
+			font-size: 2.75rem;
+			margin-bottom: 3rem;
+		}
+
+		@media (max-width: 576px) {
+			font-size: ${(props) => (props.exed ? '1.2rem' : '2.75rem')};
+		}
 	}
 
 	&::after {

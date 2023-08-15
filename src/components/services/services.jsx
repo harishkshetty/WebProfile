@@ -13,6 +13,12 @@ const StyledStack = styled(Stack)`
 		box-shadow: var(--red-shadow);
 		border-radius: 10px;
 	}
+	@media (max-width: 768px) {
+		&& {
+			padding: 3rem 1.5rem;
+			gap: 1.3rem;
+		}
+	}
 `;
 const Services = () => {
 	return (
@@ -22,7 +28,7 @@ const Services = () => {
 				headerText="Services"
 			/>
 			<Stack
-				direction="row"
+				sx={{ flexDirection: { sm: 'column', md: 'row' } }}
 				justifyContent="space-between"
 				gap={10}>
 				{data.map((el) => {
@@ -37,8 +43,11 @@ const Services = () => {
 							</Typography>
 							<Typography
 								variant="body1"
-								lineHeight="2"
-								sx={{ color: 'var(--dark-gray-text)', letterSpacing: '2px' }}>
+								sx={{
+									color: 'var(--dark-gray-text)',
+									letterSpacing: '2px',
+									lineHeight: { xs: '1.7', sm: '1.8', md: '2' },
+								}}>
 								{el.explain}
 							</Typography>
 						</StyledStack>

@@ -16,6 +16,9 @@ const StyledParagraph = styled(Typography)`
 	max-width: 80%;
 	font-size: 18px !important;
 	margin: 0.3rem 0 !important;
+	@media (max-width: 768px) {
+		max-width: unset;
+	}
 `;
 const Work = () => {
 	return (
@@ -28,11 +31,18 @@ const Work = () => {
 				{projData.map((project) => {
 					return (
 						<Stack
-							direction="row"
+							sx={{
+								flexDirection: { xs: 'column-reverse', md: 'row' },
+								marginBottom: { xs: '2rem', md: '1rem' },
+							}}
 							alignItems="center"
-							justifyContent="space-between"
-							marginBottom="1rem">
-							<Stack sx={{ width: '50%' }}>
+							justifyContent="space-between">
+							<Stack
+								sx={{
+									width: { xs: '100%', md: '50%' },
+									alignItems: { xs: 'center', md: 'unset' },
+									textAlign: { xs: 'center', md: 'unset' },
+								}}>
 								<StyledName variant="h4">{project.name}</StyledName>
 								<StyledParagraph variant="body1">
 									{project.describtion}
@@ -46,9 +56,14 @@ const Work = () => {
 									{project.languages.map((lang) => lang)}
 								</Stack>
 								<Stack
-									direction="row"
+									sx={{
+										flexDirection: { xs: 'column-reverse', md: 'row' },
+										rowGap: { xs: '1rem', md: 'unset' },
+									}}
 									spacing={3}>
-									<a href="/">
+									<a
+										href="/"
+										style={{ width: { xs: '100%', md: 'fit-content' } }}>
 										<CustomButton
 											content="Go live"
 											beforeWidth="100%"
@@ -67,7 +82,7 @@ const Work = () => {
 								</Stack>
 							</Stack>
 							<Stack
-								sx={{ width: '50%' }}
+								sx={{ width: { xs: '100%', md: '50%' } }}
 								direction="row"
 								justifyContent="center">
 								<img

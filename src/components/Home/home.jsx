@@ -8,7 +8,9 @@ const Home = () => {
 		<Box
 			id="home"
 			className="home container"
-			sx={{ background: 'var(--home-background)' }}>
+			sx={{
+				background: 'var(--home-background)',
+			}}>
 			<Nav />
 			<Stack
 				direction="row"
@@ -16,11 +18,16 @@ const Home = () => {
 				justifyContent={'center'}
 				sx={{
 					gap: '3rem',
-					paddingLeft: '8rem',
+					paddingLeft: { xs: '0rem', md: '8rem' },
 					overflow: 'hidden',
 					height: 'calc(100vh - 81px)',
 				}}>
-				<Stack spacing={2}>
+				<Stack
+					spacing={2}
+					sx={{
+						alignItems: { xs: 'center', md: 'initial' },
+						textAlign: { xs: 'center', md: 'initial' },
+					}}>
 					<Stack className="text red-text">
 						<Typography variant="body1">Hi there, my name is</Typography>
 						<Typography
@@ -43,7 +50,9 @@ const Home = () => {
 					</a>
 				</Stack>
 
-				<Box className="personalImage">
+				<Box
+					className="personalImage"
+					sx={{ display: { xs: 'none', md: 'block' } }}>
 					<img
 						style={{
 							filter: 'drop-shadow(2px 4px 12px rgba(0,0,0,0.50))',

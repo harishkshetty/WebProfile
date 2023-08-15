@@ -7,6 +7,7 @@ import Exed from '../exed/exed';
 import Work from '../work/work';
 import Skills from '../skills/skills';
 import Testimonials from '../testimonials/testimonial';
+import Footer from '../footer/footer';
 const FullPage = () => {
 	return (
 		<Box className="fullcontainer">
@@ -17,6 +18,7 @@ const FullPage = () => {
 			<Work />
 			<Skills />
 			<Testimonials />
+			<Footer />
 		</Box>
 	);
 };

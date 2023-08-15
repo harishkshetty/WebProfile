@@ -37,6 +37,14 @@ const StyledButton = styled(Button)`
 		width: 100%;
 		background-color: ${(props) => props.beforeBgColorHover};
 	}
+
+	@media (max-width: 576px) {
+		padding: 1rem 2.5rem;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 const CustomButton = ({
 	content,
