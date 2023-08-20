@@ -18,6 +18,7 @@ const StyledParagraph = styled(Typography)`
 	margin: 0.3rem 0 !important;
 	@media (max-width: 768px) {
 		max-width: unset;
+		font-size: 14px;
 	}
 `;
 const Work = () => {
@@ -59,6 +60,7 @@ const Work = () => {
 									sx={{
 										flexDirection: { xs: 'column-reverse', md: 'row' },
 										rowGap: { xs: '1rem', md: 'unset' },
+										columnGap: { xs: 'unset', md: '1rem' },
 									}}
 									spacing={3}>
 									<a
@@ -84,6 +86,7 @@ const Work = () => {
 							<Stack
 								sx={{ width: { xs: '100%', md: '50%' } }}
 								direction="row"
+								overflow="hidden"
 								justifyContent="center">
 								<img
 									src={require(`../../assets/images/${project.image}`)}

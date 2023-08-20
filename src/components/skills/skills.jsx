@@ -40,13 +40,28 @@ const Skills = () => {
 				headerText="Skills"
 			/>
 			<Stack
-				direction="row"
+				sx={{ flexDirection: { sm: 'column', lg: 'row' } }}
 				gap="1rem">
-				<Timeline position="alternate">
+				<Timeline
+					position="alternate"
+					sx={{
+						padding: { xs: '0', lg: 'initial' },
+						flexDirection: { xs: 'row', lg: 'column' },
+						flexWrap: { xs: 'wrap', lg: 'nowrap' },
+						justifyContent: { xs: 'center', lg: 'unset' },
+					}}>
 					{skills.map((skill, index) => {
 						return (
-							<TimelineItem key={skill.id}>
-								<TimelineSeparator>
+							<TimelineItem
+								key={skill.id}
+								sx={{
+									flexDirection: { xs: 'row-reverse', lg: 'row' },
+									direction: { xs: 'rtl', lg: 'ltr' },
+								}}>
+								<TimelineSeparator
+									sx={{
+										flexDirection: { xs: 'unset', lg: 'column' },
+									}}>
 									<TimelineDot
 										onClick={() => {
 											handleClick(skill.id);
@@ -57,6 +72,7 @@ const Skills = () => {
 													? 'var(--active-skill-green)'
 													: 'var(--white-text)',
 											cursor: 'pointer',
+											flexDirection: { xs: 'row', lg: 'column' },
 										}}
 									/>
 									{index === skills.length - 1 ? '' : <StyledConnector />}
@@ -74,14 +90,16 @@ const Skills = () => {
 				<Stack
 					key={chosenSkill.id}
 					borderRadius="10px"
-					padding="3rem 5.5rem"
 					boxShadow="3px 3px 29px 0px rgba(255, 154, 141, 0.25)"
-					width="74%">
+					sx={{
+						width: { xs: '100%', lg: '74%' },
+						padding: { xs: '2rem 1.5rem', lg: '3rem 5.5rem' },
+					}}>
 					<Stack gap="0.5rem">
 						<Typography
 							variant="h4"
 							fontWeight="700"
-							fontSize="2.6rem"
+							sx={{ fontSize: { xs: '2', lg: '2.6' } }}
 							color="var(--white-text)">
 							{chosenSkill.name}
 						</Typography>
@@ -89,7 +107,8 @@ const Skills = () => {
 							variant="body1"
 							color="var(--white-text)"
 							letterSpacing="1.3px"
-							lineHeight="1.8">
+							lineHeight="1.8"
+							sx={{ fontSize: { xs: '0.9rem', lg: '1rem' } }}>
 							{chosenSkill.info}
 						</Typography>
 					</Stack>

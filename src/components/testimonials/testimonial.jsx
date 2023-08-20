@@ -96,7 +96,7 @@ const Testimonials = () => {
 			className="testimonials container second-black-container"
 			sx={{ position: 'relative', height: '90vh' }}>
 			{/* quotes icons in the background */}
-			<StyledQuote
+			{/* <StyledQuote
 				style={{
 					left: '26rem',
 					top: '10rem',
@@ -107,7 +107,7 @@ const Testimonials = () => {
 					right: '26rem',
 					bottom: '7rem',
 					transform: 'rotate(3.827deg)',
-				}}></StyledQuote>
+				}}></StyledQuote> */}
 			<Heading
 				headerText="Testimonials"
 				id="testimonials"

@@ -16,6 +16,7 @@ const Exed = () => {
 		/>,
 	];
 
+	const [showIcon, setShowIcon] = useState(true);
 	// The status value
 	const [status, setStatus] = useState('experience');
 
@@ -27,6 +28,20 @@ const Exed = () => {
 
 	const [item, setItem] = useState(0);
 
+	useEffect(() => {
+		window.onresize = () => {
+			if (window.innerWidth > 1280) {
+				setShowIcon(true);
+			} else {
+				setShowIcon(false);
+			}
+		};
+		if (window.innerWidth > 1280) {
+			setShowIcon(true);
+		} else {
+			setShowIcon(false);
+		}
+	}, [window.innerWidth]);
 	// Change the stauts value
 	const handleClick = (e) => {
 		if (
@@ -69,7 +84,6 @@ const Exed = () => {
 			className="exed container black-container"
 			position="relative"
 			zIndex="1">
-			{items[item]}
 			<Stack
 				justifyContent="space-between"
 				alignItems="center"
@@ -108,11 +122,17 @@ const Exed = () => {
 			</Stack>
 			<Stack
 				direction="row"
-				color="var(--white-text)">
+				color="var(--white-text)"
+				sx={{
+					flexDirection: { xs: 'column', md: 'row' },
+					gap: { xs: '2rem', md: 'unset' },
+				}}>
 				<Stack
-					width={'32%'}
+					sx={{
+						width: { xs: '100%', md: '32%' },
+						borderRight: { xs: 'none', md: '1px solid var(--white-text)' },
+					}}
 					height="100%"
-					borderRight="1px solid var(--white-text)"
 					justifyContent="center">
 					{data.map((ex) => {
 						return (
@@ -133,7 +153,7 @@ const Exed = () => {
 								<Typography
 									variant="h2"
 									fontWeight="bold"
-									fontSize="3.5rem">
+									sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
 									{ex.name}
 								</Typography>
 								<Typography
@@ -145,15 +165,20 @@ const Exed = () => {
 						);
 					})}
 				</Stack>
-				<Stack padding="1rem 4rem">
+				<Stack
+					sx={{
+						padding: { xs: 'unset', md: '1rem 4rem' },
+						position: 'relative',
+					}}>
+					{showIcon && items[item]}
 					<Typography
 						variant="h5"
 						sx={{
 							marginBottom: '0.5rem',
 							fontSize: `${
 								chosenElement.name === 'Bachelor in Computer Science'
-									? '1.3rem'
-									: '1.5rem'
+									? { xs: '1rem', md: '1.3rem' }
+									: { xs: '1rem', md: '1.5rem' }
 							}`,
 							fontWeight: '500',
 						}}>
@@ -165,19 +190,23 @@ const Exed = () => {
 							marginBottom: '1rem',
 							letterSpacing: '1.3px',
 							lineHeight: '1.6',
+							fontSize: { xs: '0.8rem', md: 'initial' },
 						}}
 						dangerouslySetInnerHTML={{
 							__html: chosenElement.about.info,
 						}}></Typography>
 					<Typography
 						variant="h6"
-						sx={{ fontWeight: '500' }}>
+						sx={{
+							fontWeight: '500',
+							fontSize: { xs: '1rem', md: 'initial' },
+						}}>
 						{chosenElement.about.subTitle}
 					</Typography>
 
 					<ul
 						style={{
-							marginLeft: '3rem',
+							marginLeft: '2rem',
 							lineHeight: '1.6',
 						}}>
 						{chosenElement.about.list.map((item) => {
@@ -185,7 +214,10 @@ const Exed = () => {
 								<li>
 									<Typography
 										variant="body2"
-										letterSpacing="1.3px">
+										letterSpacing="1.3px"
+										sx={{
+											fontSize: { xs: '0.8rem', md: 'initial' },
+										}}>
 										{item}
 									</Typography>
 								</li>
@@ -195,10 +227,18 @@ const Exed = () => {
 
 					<Typography
 						variant="h6"
-						sx={{ marginTop: '1rem', fontWeight: '500' }}>
+						sx={{
+							marginTop: '1rem',
+							fontWeight: '500',
+							fontSize: { xs: '1rem', md: 'initial' },
+						}}>
 						{chosenElement.moreInfo.title}
 					</Typography>
-					<Typography variant="overline">
+					<Typography
+						variant="overline"
+						sx={{
+							fontSize: { xs: '0.7rem', md: 'initial' },
+						}}>
 						{chosenElement.moreInfo.text}
 					</Typography>
 				</Stack>

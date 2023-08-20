@@ -15,7 +15,7 @@ const StyledStack = styled(Stack)`
 	}
 	@media (max-width: 768px) {
 		&& {
-			padding: 3rem 1.5rem;
+			padding: 2rem 1rem;
 			gap: 1.3rem;
 		}
 	}
