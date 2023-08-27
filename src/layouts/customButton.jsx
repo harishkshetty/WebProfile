@@ -4,7 +4,8 @@ import React from 'react';
 
 const StyledButton = styled(Button)`
 	position: relative;
-	border: 1px solid var(--red-text);
+	border: 1px solid
+		${(props) => (props.disabled ? '#b99b97' : 'var(--red-text)')};
 	width: fit-content;
 	border-radius: 12px;
 	color: ${(props) => props.textColor};
@@ -25,7 +26,9 @@ const StyledButton = styled(Button)`
 		height: 100%;
 		border-radius: 12px;
 		z-index: -1;
-		background-color: var(--red-text);
+		background-color: ${(props) =>
+			props.disabled ? '#b99b97' : 'var(--red-text)'};
+
 		transition: all 0.2s ease-in-out !important;
 	}
 
@@ -52,12 +55,14 @@ const CustomButton = ({
 	beforeWidth,
 	beforeBgColorHover,
 	hoverColor,
+	disabled,
 }) => {
 	return (
 		<StyledButton
 			beforeWidth={beforeWidth}
 			beforeBgColorHover={beforeBgColorHover}
 			hoverColor={hoverColor}
+			disabled={disabled}
 			sx={{ color: textColor }}>
 			{content}
 		</StyledButton>

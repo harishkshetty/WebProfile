@@ -33,16 +33,16 @@ const Work = () => {
 					return (
 						<Stack
 							sx={{
-								flexDirection: { xs: 'column-reverse', md: 'row' },
-								marginBottom: { xs: '2rem', md: '1rem' },
+								flexDirection: { xs: 'column-reverse', lg: 'row' },
+								marginBottom: { xs: '2rem', lg: '1rem' },
 							}}
 							alignItems="center"
 							justifyContent="space-between">
 							<Stack
 								sx={{
-									width: { xs: '100%', md: '50%' },
-									alignItems: { xs: 'center', md: 'unset' },
-									textAlign: { xs: 'center', md: 'unset' },
+									width: { xs: '100%', lg: '50%' },
+									alignItems: { xs: 'center', lg: 'unset' },
+									textAlign: { xs: 'center', lg: 'unset' },
 								}}>
 								<StyledName variant="h4">{project.name}</StyledName>
 								<StyledParagraph variant="body1">
@@ -58,20 +58,23 @@ const Work = () => {
 								</Stack>
 								<Stack
 									sx={{
-										flexDirection: { xs: 'column-reverse', md: 'row' },
-										rowGap: { xs: '1rem', md: 'unset' },
-										columnGap: { xs: 'unset', md: '1rem' },
+										flexDirection: { xs: 'column-reverse', lg: 'row' },
+										rowGap: { xs: '1rem', lg: 'unset' },
+										columnGap: { xs: 'unset', lg: '1rem' },
 									}}
 									spacing={3}>
 									<a
-										href="/"
-										style={{ width: { xs: '100%', md: 'fit-content' } }}>
+										href={project.link}
+										target="_blank"
+										rel="noreferrer"
+										style={{ width: { xs: '100%', lg: 'fit-content' } }}>
 										<CustomButton
 											content="Go live"
 											beforeWidth="100%"
 											textColor="black"
 											hoverColor="var(--white-text)"
 											beforeBgColorHover="transparent"
+											disabled={!project.done}
 										/>
 									</a>
 									<CustomButton
@@ -84,7 +87,7 @@ const Work = () => {
 								</Stack>
 							</Stack>
 							<Stack
-								sx={{ width: { xs: '100%', md: '50%' } }}
+								sx={{ width: { xs: '100%', lg: '50%' } }}
 								direction="row"
 								overflow="hidden"
 								justifyContent="center">

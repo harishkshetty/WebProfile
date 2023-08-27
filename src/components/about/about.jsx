@@ -30,7 +30,7 @@ const About = () => {
 			/>
 			<Stack
 				sx={{
-					flexDirection: { xs: 'column', md: 'row' },
+					flexDirection: { xs: 'column', lg: 'row' },
 				}}
 				justifyContent="space-between"
 				marginY={3}>
@@ -38,12 +38,12 @@ const About = () => {
 					spacing={5}
 					justifyContent="space-between"
 					sx={{
-						width: { xs: '100%', md: '60%' },
+						width: { xs: '100%', lg: '60%' },
 						alignItems: { xs: 'center', sm: 'flex-start' },
 					}}>
 					<Typography
 						variant="body1"
-						sx={{ fontSize: { xs: '16px', md: '20px' } }}
+						sx={{ fontSize: { xs: '16px', lg: '20px' } }}
 						className="gray-text">
 						<h3>
 							Hello, I'm Hossam<span>👋</span>
@@ -75,7 +75,7 @@ const About = () => {
 				</Stack>
 				<CustomizeStack
 					spacing={7}
-					sx={{ display: { xs: 'none', md: 'flex' } }}
+					sx={{ display: { xs: 'none', lg: 'flex' } }}
 					justifyContent="center">
 					{data.map((el) => {
 						return (

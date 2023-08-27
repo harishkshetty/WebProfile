@@ -99,6 +99,7 @@ const Exed = () => {
 							transition: 'all 0.2s linear',
 							transformOrigin: 'right',
 							cursor: 'pointer',
+							fontSize: { sx: '1.2rem', lg: 'initial' },
 						},
 						onClick: handleClick,
 					}}
@@ -124,13 +125,13 @@ const Exed = () => {
 				direction="row"
 				color="var(--white-text)"
 				sx={{
-					flexDirection: { xs: 'column', md: 'row' },
-					gap: { xs: '2rem', md: 'unset' },
+					flexDirection: { xs: 'column', lg: 'row' },
+					gap: { xs: '2rem', lg: 'unset' },
 				}}>
 				<Stack
 					sx={{
-						width: { xs: '100%', md: '32%' },
-						borderRight: { xs: 'none', md: '1px solid var(--white-text)' },
+						width: { xs: '100%', lg: '32%' },
+						borderRight: { xs: 'none', lg: '1px solid var(--white-text)' },
 					}}
 					height="100%"
 					justifyContent="center">
@@ -153,7 +154,7 @@ const Exed = () => {
 								<Typography
 									variant="h2"
 									fontWeight="bold"
-									sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+									sx={{ fontSize: { xs: '2.5rem', lg: '3.5rem' } }}>
 									{ex.name}
 								</Typography>
 								<Typography
@@ -167,7 +168,7 @@ const Exed = () => {
 				</Stack>
 				<Stack
 					sx={{
-						padding: { xs: 'unset', md: '1rem 4rem' },
+						padding: { xs: 'unset', lg: '1rem 4rem' },
 						position: 'relative',
 					}}>
 					{showIcon && items[item]}
@@ -177,8 +178,8 @@ const Exed = () => {
 							marginBottom: '0.5rem',
 							fontSize: `${
 								chosenElement.name === 'Bachelor in Computer Science'
-									? { xs: '1rem', md: '1.3rem' }
-									: { xs: '1rem', md: '1.5rem' }
+									? { xs: '1rem', lg: '1.3rem' }
+									: { xs: '1rem', lg: '1.5rem' }
 							}`,
 							fontWeight: '500',
 						}}>
@@ -190,7 +191,7 @@ const Exed = () => {
 							marginBottom: '1rem',
 							letterSpacing: '1.3px',
 							lineHeight: '1.6',
-							fontSize: { xs: '0.8rem', md: 'initial' },
+							fontSize: { xs: '0.8rem', lg: 'initial' },
 						}}
 						dangerouslySetInnerHTML={{
 							__html: chosenElement.about.info,
@@ -199,7 +200,7 @@ const Exed = () => {
 						variant="h6"
 						sx={{
 							fontWeight: '500',
-							fontSize: { xs: '1rem', md: 'initial' },
+							fontSize: { xs: '1rem', lg: 'initial' },
 						}}>
 						{chosenElement.about.subTitle}
 					</Typography>
@@ -216,7 +217,7 @@ const Exed = () => {
 										variant="body2"
 										letterSpacing="1.3px"
 										sx={{
-											fontSize: { xs: '0.8rem', md: 'initial' },
+											fontSize: { xs: '0.8rem', lg: 'initial' },
 										}}>
 										{item}
 									</Typography>
@@ -230,14 +231,14 @@ const Exed = () => {
 						sx={{
 							marginTop: '1rem',
 							fontWeight: '500',
-							fontSize: { xs: '1rem', md: 'initial' },
+							fontSize: { xs: '1rem', lg: 'initial' },
 						}}>
 						{chosenElement.moreInfo.title}
 					</Typography>
 					<Typography
 						variant="overline"
 						sx={{
-							fontSize: { xs: '0.7rem', md: 'initial' },
+							fontSize: { xs: '0.7rem', lg: 'initial' },
 						}}>
 						{chosenElement.moreInfo.text}
 					</Typography>
