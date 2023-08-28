@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Stack } from '@mui/material';
 import LogoImage from '../../assets/images/Logo.png';
 import { styled } from 'styled-components';
@@ -59,6 +59,17 @@ const Nav = () => {
 	const handleMenuClick = () => {
 		setClicked(!clicked);
 	};
+	const handleLinkClick = () => {
+		setClicked(false);
+	};
+
+	useEffect(() => {
+		if (clicked) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
+	}, [clicked]);
 	return (
 		<Box
 			component="nav"
@@ -104,32 +115,60 @@ const Nav = () => {
 
 				<Sytledlinks clicked={clicked}>
 					<li>
-						<SytledlinksItems href="#home">Home</SytledlinksItems>
+						<SytledlinksItems
+							href="#home"
+							onClick={handleLinkClick}>
+							Home
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#about">About me</SytledlinksItems>
+						<SytledlinksItems
+							href="#about"
+							onClick={handleLinkClick}>
+							About me
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#services">Services</SytledlinksItems>
+						<SytledlinksItems
+							href="#services"
+							onClick={handleLinkClick}>
+							Services
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#exed">
+						<SytledlinksItems
+							href="#exed"
+							onClick={handleLinkClick}>
 							Experience & Education
 						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#work">My work</SytledlinksItems>
+						<SytledlinksItems
+							href="#work"
+							onClick={handleLinkClick}>
+							My work
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#skills">Skills</SytledlinksItems>
+						<SytledlinksItems
+							href="#skills"
+							onClick={handleLinkClick}>
+							Skills
+						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#testimonials">
+						<SytledlinksItems
+							href="#testimonials"
+							onClick={handleLinkClick}>
 							Testimonials
 						</SytledlinksItems>
 					</li>
 					<li>
-						<SytledlinksItems href="#contact">Contact</SytledlinksItems>
+						<SytledlinksItems
+							href="#contact"
+							onClick={handleLinkClick}>
+							Contact
+						</SytledlinksItems>
 					</li>
 				</Sytledlinks>
 			</Stack>
