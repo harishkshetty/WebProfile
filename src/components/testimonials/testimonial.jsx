@@ -94,7 +94,7 @@ const Testimonials = () => {
 	return (
 		<Box
 			className="testimonials container second-black-container"
-			sx={{ position: 'relative', height: '90vh' }}>
+			sx={{ position: 'relative' }}>
 			{/* quotes icons in the background */}
 			{/* <StyledQuote
 				style={{
