@@ -82,8 +82,8 @@ export const projData = [
 		id: 3,
 		name: 'Fit Club',
 		describtion:
-			'Explore the comprehensive portfolio website of an accomplished Architecture Engineer, showcasing her diverse skill set, extensive experience, and notable educational background.',
-		languages: [icons.html, icons.javascript, icons.css],
+			'Create a dynamic and responsive landing page for a prominent gym, showcasing its comprehensive array of services, pricing details, and indepth information. By adeptly utilizing React for front-end development and CSS for styling.',
+		languages: [icons.react, icons.css],
 		image: 'Fit-Club.png',
 		link: 'https://hossammahmoudkhedr.github.io/FitClub-Website/',
 		done: true,

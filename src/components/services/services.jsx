@@ -28,7 +28,7 @@ const Services = () => {
 				headerText="Services"
 			/>
 			<Stack
-				sx={{ flexDirection: { sm: 'column', md: 'row' } }}
+				sx={{ flexDirection: { sm: 'column', lg: 'row' } }}
 				justifyContent="space-between"
 				gap={10}>
 				{data.map((el) => {
@@ -46,7 +46,7 @@ const Services = () => {
 								sx={{
 									color: 'var(--dark-gray-text)',
 									letterSpacing: '2px',
-									lineHeight: { xs: '1.7', sm: '1.8', md: '2' },
+									lineHeight: { xs: '1.7', sm: '1.8', lg: '2' },
 								}}>
 								{el.explain}
 							</Typography>
