@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Stack, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
 import Heading from '../../layouts/heading';
 import { projData } from '../../data/projectsData';
 import CustomButton from '../../layouts/customButton';
@@ -21,13 +21,57 @@ const StyledParagraph = styled(Typography)`
 		font-size: 14px;
 	}
 `;
+
+const ShowMoreButton = styled(Button)`
+	&& {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		color: var(--red-text);
+		background-color: var(--second-black-background);
+		z-index: 3;
+		box-shadow: 0 -3px 10px 2px rgb(255 154 141 / 12%);
+	}
+
+	&&:hover {
+		background-color: #333333;
+		box-shadow: 0 -3px 10px 2px rgb(255 154 141 / 12%);
+	}
+`;
 const Work = () => {
+	const [buttonText, setButtonText] = useState('more');
+	const [projectHeight, setProjectHeight] = useState('105rem');
+
+	const handleClick = () => {
+		if (buttonText === 'more') {
+			setButtonText('less');
+			setProjectHeight('fit-content');
+		} else {
+			setButtonText('more');
+			setProjectHeight('105rem');
+		}
+	};
 	return (
-		<Box className="work container second-black-container">
+		<Box
+			className="work container second-black-container"
+			sx={{
+				height: projectHeight,
+				overflow: 'hidden',
+				position: 'relative',
+				transition: 'all 0.5s linear',
+			}}>
 			<Heading
 				headerText="My Work"
 				id="work"
 			/>
+			<ShowMoreButton
+				variant="contained"
+				onClick={handleClick}>
+				Show {buttonText} projects
+			</ShowMoreButton>
 			<Box className="projects">
 				{projData.map((project) => {
 					return (
@@ -67,7 +111,10 @@ const Work = () => {
 										href={project.link}
 										target="_blank"
 										rel="noreferrer"
-										style={{ width: { xs: '100%', lg: 'fit-content' } }}>
+										style={{
+											width: { xs: '100%', lg: 'fit-content' },
+											pointerEvents: project.done ? '' : 'none',
+										}}>
 										<CustomButton
 											content="Go live"
 											beforeWidth="100%"
@@ -77,13 +124,24 @@ const Work = () => {
 											disabled={!project.done}
 										/>
 									</a>
-									<CustomButton
-										content="Learn more"
-										beforeWidth={'0%'}
-										beforeBgColorHover="var(--red-text)"
-										hoverColor="black"
-										textColor="var(--white-text)"
-									/>
+									<a
+										href={project.gitLink}
+										target="_blank"
+										rel="noreferrer"
+										style={{
+											width: { xs: '100%', lg: 'fit-content' },
+											marginTop: '0px',
+											pointerEvents: project.gitLink === '#' ? 'none' : '',
+										}}>
+										<CustomButton
+											content="Learn more"
+											beforeWidth={'0%'}
+											beforeBgColorHover="var(--red-text)"
+											hoverColor="black"
+											textColor="var(--white-text)"
+											disabled={project.gitLink === '#' ? true : false}
+										/>
+									</a>
 								</Stack>
 							</Stack>
 							<Stack

@@ -55,7 +55,8 @@ export const projData = [
 			'A website to create your professional CV with the power of AI, ensuring it passes the ATS test and boosts your chances of securing that crucial first interview.',
 		languages: [icons.react, icons.mui, icons.axios, icons.css],
 		image: 'CValue1.png',
-		link: '',
+		link: '#',
+		gitLink: '#',
 		done: false,
 	},
 	{
@@ -66,26 +67,53 @@ export const projData = [
 		languages: [icons.react, icons.css],
 		image: 'Nourhan-Shakir1.png',
 		link: 'https://hossammahmoudkhedr.github.io/Architecture-Engineer-Portfolio-Website/',
+		gitLink:
+			'https://github.com/HossamMahmoudkhedr/Architecture-Engineer-Portfolio-Website',
 		done: true,
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Light Plus',
 		describtion:
 			"Fine-tuned the visual aspects of the theme. Through CSS modifications, I optimized the typography, and color palette to align with the brand's identity. Integrated JavaScript enhancements to improve user interactions.",
 		languages: [icons.html, icons.javascript, icons.css],
 		image: 'Light-plus.png',
 		link: 'https://light-plus.co/',
+		gitLink: '#',
 		done: true,
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Fit Club',
 		describtion:
 			'Create a dynamic and responsive landing page for a prominent gym, showcasing its comprehensive array of services, pricing details, and indepth information. By adeptly utilizing React for front-end development and CSS for styling.',
 		languages: [icons.react, icons.css],
 		image: 'Fit-Club.png',
 		link: 'https://hossammahmoudkhedr.github.io/FitClub-Website/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/FitClub-Website',
+		done: true,
+	},
+	{
+		id: 5,
+		name: 'Simah',
+		describtion:
+			"Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional e-commerce enterprise. This website serves as a virtual gateway, effectively conveying the company's core strengths.",
+		languages: [icons.react, icons.css],
+		image: 'Simah.png',
+		link: 'https://hossammahmoudkhedr.github.io/Managing-E-commerce-website/',
+		gitLink:
+			'https://github.com/HossamMahmoudkhedr/Managing-E-commerce-website',
+		done: true,
+	},
+	{
+		id: 6,
+		name: 'Bondi',
+		describtion:
+			"Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional e-commerce enterprise. This website serves as a virtual gateway, effectively conveying the company's core strengths.",
+		languages: [icons.html, icons.css, icons.bootStrap],
+		image: 'Bondi.png',
+		link: 'https://hossammahmoudkhedr.github.io/Bondi-Landing-Page/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/Bondi-Landing-Page',
 		done: true,
 	},
 ];
