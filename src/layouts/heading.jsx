@@ -11,7 +11,7 @@ const StyledHeading = styled(Typography)`
 		margin-bottom: 5rem;
 		letter-spacing: 5px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 992px) {
 			font-size: 2.75rem;
 			margin-bottom: 3rem;
 		}

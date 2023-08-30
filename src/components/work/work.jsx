@@ -48,7 +48,7 @@ const Work = () => {
 	const handleClick = () => {
 		if (buttonText === 'more') {
 			setButtonText('less');
-			setProjectHeight('fit-content');
+			setProjectHeight('100%');
 		} else {
 			setButtonText('more');
 			setProjectHeight('105rem');

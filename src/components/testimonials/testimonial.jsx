@@ -94,7 +94,7 @@ const Testimonials = () => {
 	return (
 		<Box
 			className="testimonials container second-black-container"
-			sx={{ position: 'relative' }}>
+			sx={{ position: 'relative', paddingBottom: '2rem' }}>
 			{/* quotes icons in the background */}
 			{/* <StyledQuote
 				style={{
@@ -177,6 +177,7 @@ const Testimonials = () => {
 									variant="subtitle1"
 									color="white"
 									maxWidth="449px"
+									height="200px"
 									textAlign="center">
 									{testimonial.opinion}
 								</Typography>
