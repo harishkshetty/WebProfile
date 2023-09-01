@@ -4,6 +4,7 @@ import Heading from '../../layouts/heading';
 import CustomButton from '../../layouts/customButton';
 import { styled } from 'styled-components';
 import { data } from '../../data/aboutData';
+import CV from '../../assets/CV/Hossam Mahmoud CV_Frontend.pdf';
 
 const CustomizeStack = styled(Stack)`
 	position: relative;
@@ -63,7 +64,10 @@ const About = () => {
 						</p>
 					</Typography>
 					<a
-						href="#"
+						href={CV}
+						download="Hossam Mahmoud CV_Frontend"
+						target="_blank"
+						rel="noreferrer"
 						style={{ width: 'fit-content' }}>
 						<CustomButton
 							beforeWidth="100%"
