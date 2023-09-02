@@ -116,4 +116,15 @@ export const projData = [
 		gitLink: 'https://github.com/HossamMahmoudkhedr/Bondi-Landing-Page',
 		done: true,
 	},
+	{
+		id: 7,
+		name: 'Book Store',
+		describtion:
+			'Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional Book Store website. This website serves as a virtual gateway, and shows all the books which you can order any of them online.',
+		languages: [icons.react, icons.css],
+		image: 'Book-Store.png',
+		link: 'https://hossammahmoudkhedr.github.io/Book-Store/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/Book-Store',
+		done: true,
+	},
 ];
