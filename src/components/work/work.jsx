@@ -81,7 +81,8 @@ const Work = () => {
 								marginBottom: { xs: '2rem', lg: '1rem' },
 							}}
 							alignItems="center"
-							justifyContent="space-between">
+							justifyContent="space-between"
+							key={project.id}>
 							<Stack
 								sx={{
 									width: { xs: '100%', lg: '50%' },

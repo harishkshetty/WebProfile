@@ -127,4 +127,15 @@ export const projData = [
 		gitLink: 'https://github.com/HossamMahmoudkhedr/Book-Store',
 		done: true,
 	},
+	{
+		id: 8,
+		name: 'Shortly',
+		describtion:
+			'Crafted using HTML, CSS, and JavaScript, the website allows you to effortlessly transform lengthy website addresses into concise, user-friendly links.',
+		languages: [icons.html, icons.css, icons.javascript],
+		image: 'Shortly.png',
+		link: 'https://hossammahmoudkhedr.github.io/Short-URL/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/Short-URL',
+		done: true,
+	},
 ];
