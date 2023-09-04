@@ -13,7 +13,7 @@ const Sytledlinks = styled.ul`
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		z-index: 2;
 		flex-direction: column;
 		justify-content: center;
@@ -93,7 +93,11 @@ const Nav = () => {
 			whileInView="visible"
 			viewport={{ once: true }}
 			className="navContainer"
-			sx={{ backgroundColor: 'var(--home-background)' }}>
+			sx={{
+				backgroundColor: 'var(--home-background)',
+				position: 'relative',
+				zIndex: 1,
+			}}>
 			<Stack
 				direction="row"
 				sx={{
