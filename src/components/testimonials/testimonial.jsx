@@ -127,7 +127,7 @@ const Testimonials = () => {
 				component={motion.div}
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				transition={{ duration: 1, delay: 1.7 }}
+				transition={{ duration: 1, delay: 0.7 }}
 				viewport={{ once: true }}>
 				{/* Container of the testimonials data and its buttons */}
 				<Stack
