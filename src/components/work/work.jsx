@@ -4,6 +4,7 @@ import Heading from '../../layouts/heading';
 import { projData } from '../../data/projectsData';
 import CustomButton from '../../layouts/customButton';
 import { styled } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const StyledName = styled(Typography)`
 	color: var(--white-text) !important;
@@ -76,6 +77,11 @@ const Work = () => {
 				{projData.map((project) => {
 					return (
 						<Stack
+							component={motion.div}
+							initial={{ y: 100, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{ duration: 1 }}
+							viewport={{ once: true }}
 							sx={{
 								flexDirection: { xs: 'column-reverse', lg: 'row' },
 								marginBottom: { xs: '2rem', lg: '1rem' },

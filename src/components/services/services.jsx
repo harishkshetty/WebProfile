@@ -3,6 +3,7 @@ import React from 'react';
 import Heading from '../../layouts/heading';
 import { data } from '../../data/servicesData';
 import { styled } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const StyledStack = styled(Stack)`
 	&& {
@@ -20,6 +21,7 @@ const StyledStack = styled(Stack)`
 		}
 	}
 `;
+
 const Services = () => {
 	return (
 		<Box className="about container second-black-container">
@@ -28,12 +30,29 @@ const Services = () => {
 				headerText="Services"
 			/>
 			<Stack
-				sx={{ flexDirection: { sm: 'column', lg: 'row' } }}
+				sx={{
+					flexDirection: { sm: 'column', lg: 'row' },
+					overflow: 'hidden',
+					padding: '25px',
+				}}
 				justifyContent="space-between"
 				gap={10}>
 				{data.map((el) => {
+					let transform = el.name === 'Web Design' ? -520 : 520;
 					return (
-						<StyledStack key={el.id}>
+						<StyledStack
+							as={motion.div}
+							initial={{
+								x: transform,
+								opacity: 0,
+							}}
+							whileInView={{ x: 0, opacity: 1 }}
+							transition={{
+								delay: 1.5,
+								duration: 1.5,
+							}}
+							viewport={{ once: true }}
+							key={el.id}>
 							{el.icon}
 							<Typography
 								variant="h4"

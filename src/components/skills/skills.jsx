@@ -11,6 +11,7 @@ import {
 	TimelineContent,
 	TimelineDot,
 } from '@mui/lab';
+import { motion } from 'framer-motion';
 
 const StyledConnector = styled(TimelineConnector)`
 	&& {
@@ -88,6 +89,11 @@ const Skills = () => {
 					})}
 				</Timeline>
 				<Stack
+					component={motion.div}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1.5, delay: 1.4 }}
+					viewport={{ once: true }}
 					key={chosenSkill.id}
 					borderRadius="10px"
 					boxShadow="3px 3px 29px 0px rgba(255, 154, 141, 0.25)"

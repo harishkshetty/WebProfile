@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Stack } from '@mui/material';
 import LogoImage from '../../assets/images/Logo.png';
 import { styled } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Sytledlinks = styled.ul`
 	display: flex;
@@ -54,6 +55,20 @@ const Menu = styled.span`
 	background-color: var(--red-text);
 	transition: all 0.3s linear;
 `;
+
+const navVariants = {
+	hidden: {
+		transform: 'translateY(-100%)',
+	},
+	visible: {
+		transform: 'translateY(0%)',
+		transition: {
+			duration: 1,
+			delay: 0.5,
+		},
+	},
+};
+
 const Nav = () => {
 	const [clicked, setClicked] = useState(false);
 	const handleMenuClick = () => {
@@ -72,7 +87,11 @@ const Nav = () => {
 	}, [clicked]);
 	return (
 		<Box
-			component="nav"
+			component={motion.nav}
+			variants={navVariants}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
 			className="navContainer"
 			sx={{ backgroundColor: 'var(--home-background)' }}>
 			<Stack

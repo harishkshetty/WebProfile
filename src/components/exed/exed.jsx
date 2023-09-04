@@ -1,12 +1,36 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Heading from '../../layouts/heading';
-import styled from '@emotion/styled';
 import { exData } from '../../data/experienceData';
 import { edData } from '../../data/educationData';
 import { ReactComponent as ExperienceIcon } from '../../assets/icons/laptop-code-solid.svg';
 import { ReactComponent as EducationIcon } from '../../assets/icons/graduation-cap-solid.svg';
+import { motion } from 'framer-motion';
 
+const namesVarinats = {
+	hidden: {
+		transform: 'translateX(100%)',
+	},
+	visible: {
+		transform: 'translateX(0%)',
+		transition: {
+			delay: 1,
+			duration: 0.5,
+		},
+	},
+};
+const detailsVarinats = {
+	hidden: {
+		transform: 'translateX(-100%)',
+	},
+	visible: {
+		transform: 'translateX(0%)',
+		transition: {
+			delay: 1,
+			duration: 0.5,
+		},
+	},
+};
 const Exed = () => {
 	const items = [
 		<ExperienceIcon className="back-icon" />,
@@ -130,119 +154,134 @@ const Exed = () => {
 				}}>
 				<Stack
 					sx={{
-						width: { xs: '100%', lg: '32%' },
+						width: { xs: '100%', lg: '45%' },
 						borderRight: { xs: 'none', lg: '1px solid var(--white-text)' },
 					}}
 					height="100%"
 					justifyContent="center">
-					{data.map((ex) => {
-						return (
-							<Box
-								id={ex.name}
-								key={ex.id}
-								onClick={handleExperienceClick}
-								className={`${status} ${ex.id === 1 ? 'activeBox' : ''}`}
-								sx={{
-									cursor: 'pointer',
-									borderBottom: `${
-										ex.id < data.length ? '1px solid var(--white-text)' : ''
-									}`,
-									padding: '4rem 2rem',
-									textAlign: 'center',
-									fontWeight: 'bold',
-								}}>
-								<Typography
-									variant="h2"
-									fontWeight="bold"
-									sx={{ fontSize: { xs: '2.5rem', lg: '3.5rem' } }}>
-									{ex.name}
-								</Typography>
-								<Typography
-									variant="subtitle1"
-									sx={{ color: 'var(--gray-text)' }}>
-									{ex.type}
-								</Typography>
-							</Box>
-						);
-					})}
-				</Stack>
-				<Stack
-					sx={{
-						padding: { xs: 'unset', lg: '1rem 4rem' },
-						position: 'relative',
-					}}>
-					{showIcon && items[item]}
-					<Typography
-						variant="h5"
-						sx={{
-							marginBottom: '0.5rem',
-							fontSize: `${
-								chosenElement.name === 'Bachelor in Computer Science'
-									? { xs: '1rem', lg: '1.3rem' }
-									: { xs: '1rem', lg: '1.5rem' }
-							}`,
-							fontWeight: '500',
-						}}>
-						{chosenElement.about.date}
-					</Typography>
-					<Typography
-						variant="body2"
-						sx={{
-							marginBottom: '1rem',
-							letterSpacing: '1.3px',
-							lineHeight: '1.6',
-							fontSize: { xs: '0.8rem', lg: 'initial' },
-						}}
-						dangerouslySetInnerHTML={{
-							__html: chosenElement.about.info,
-						}}></Typography>
-					<Typography
-						variant="h6"
-						sx={{
-							fontWeight: '500',
-							fontSize: { xs: '1rem', lg: 'initial' },
-						}}>
-						{chosenElement.about.subTitle}
-					</Typography>
-
-					<ul
-						style={{
-							marginLeft: '2rem',
-							lineHeight: '1.6',
-						}}>
-						{chosenElement.about.list.map((item) => {
+					<Stack overflow="hidden">
+						{data.map((ex) => {
 							return (
-								<li>
+								<Box
+									component={motion.div}
+									variants={namesVarinats}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true }}
+									id={ex.name}
+									key={ex.id}
+									onClick={handleExperienceClick}
+									className={`${status} ${ex.id === 1 ? 'activeBox' : ''}`}
+									sx={{
+										cursor: 'pointer',
+										borderBottom: `${
+											ex.id < data.length ? '1px solid var(--white-text)' : ''
+										}`,
+										padding: '4rem 2rem',
+										textAlign: 'center',
+										fontWeight: 'bold',
+									}}>
 									<Typography
-										variant="body2"
-										letterSpacing="1.3px"
-										sx={{
-											fontSize: { xs: '0.8rem', lg: 'initial' },
-										}}>
-										{item}
+										variant="h2"
+										fontWeight="bold"
+										sx={{ fontSize: { xs: '2.5rem', lg: '3.5rem' } }}>
+										{ex.name}
 									</Typography>
-								</li>
+									<Typography
+										variant="subtitle1"
+										sx={{ color: 'var(--gray-text)' }}>
+										{ex.type}
+									</Typography>
+								</Box>
 							);
 						})}
-					</ul>
-
-					<Typography
-						variant="h6"
-						sx={{
-							marginTop: '1rem',
-							fontWeight: '500',
-							fontSize: { xs: '1rem', lg: 'initial' },
-						}}>
-						{chosenElement.moreInfo.title}
-					</Typography>
-					<Typography
-						variant="overline"
-						sx={{
-							fontSize: { xs: '0.7rem', lg: 'initial' },
-						}}>
-						{chosenElement.moreInfo.text}
-					</Typography>
+					</Stack>
 				</Stack>
+				<Stack sx={{ position: 'relative', overflow: 'hidden' }}>
+					{showIcon && items[item]}
+					<Stack
+						component={motion.div}
+						variants={detailsVarinats}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
+						exit={{ transform: 'translateX(-100%)' }}
+						sx={{
+							padding: { xs: 'unset', lg: '1rem 4rem' },
+						}}>
+						<Typography
+							variant="h5"
+							sx={{
+								marginBottom: '0.5rem',
+								fontSize: `${
+									chosenElement.name === 'Bachelor in Computer Science'
+										? { xs: '1rem', lg: '1.3rem' }
+										: { xs: '1rem', lg: '1.5rem' }
+								}`,
+								fontWeight: '500',
+							}}>
+							{chosenElement.about.date}
+						</Typography>
+						<Typography
+							variant="body2"
+							sx={{
+								marginBottom: '1rem',
+								letterSpacing: '1.3px',
+								lineHeight: '1.6',
+								fontSize: { xs: '0.8rem', lg: 'initial' },
+							}}
+							dangerouslySetInnerHTML={{
+								__html: chosenElement.about.info,
+							}}></Typography>
+						<Typography
+							variant="h6"
+							sx={{
+								fontWeight: '500',
+								fontSize: { xs: '1rem', lg: 'initial' },
+							}}>
+							{chosenElement.about.subTitle}
+						</Typography>
+
+						<ul
+							style={{
+								marginLeft: '2rem',
+								lineHeight: '1.6',
+							}}>
+							{chosenElement.about.list.map((item) => {
+								return (
+									<li>
+										<Typography
+											variant="body2"
+											letterSpacing="1.3px"
+											sx={{
+												fontSize: { xs: '0.8rem', lg: 'initial' },
+											}}>
+											{item}
+										</Typography>
+									</li>
+								);
+							})}
+						</ul>
+
+						<Typography
+							variant="h6"
+							sx={{
+								marginTop: '1rem',
+								fontWeight: '500',
+								fontSize: { xs: '1rem', lg: 'initial' },
+							}}>
+							{chosenElement.moreInfo.title}
+						</Typography>
+						<Typography
+							variant="overline"
+							sx={{
+								fontSize: { xs: '0.7rem', lg: 'initial' },
+							}}>
+							{chosenElement.moreInfo.text}
+						</Typography>
+					</Stack>
+				</Stack>
+				{/* watch out */}
 			</Stack>
 		</Box>
 	);

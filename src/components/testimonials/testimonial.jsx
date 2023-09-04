@@ -7,6 +7,7 @@ import { ReactComponent as Quote } from '../../assets/icons/quote-left-solid.svg
 import { ReactComponent as LeftArrow } from '../../assets/icons/arrow-left-solid.svg';
 import { ReactComponent as RightArrow } from '../../assets/icons/arrow-right-solid.svg';
 import { testimonials } from '../../data/testimonialsData';
+import { motion } from 'framer-motion';
 
 const Circle = styled(Box)`
 	width: 100px;
@@ -122,7 +123,12 @@ const Testimonials = () => {
 				variant="text">
 				<StyledRightArrow />
 			</RightButton>
-			<Box>
+			<Box
+				component={motion.div}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 1, delay: 1.7 }}
+				viewport={{ once: true }}>
 				{/* Container of the testimonials data and its buttons */}
 				<Stack
 					position="relative"

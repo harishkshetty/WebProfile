@@ -3,6 +3,79 @@ import React from 'react';
 import Nav from '../nav/nav';
 import PersonalImage from '../../assets/images/IMG_yphqhh222-removebg.png';
 import CustomButton from '../../layouts/customButton';
+import { motion } from 'framer-motion';
+const myVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 1.5,
+		},
+	},
+};
+
+const nameVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 2,
+		},
+	},
+};
+
+const titleVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 2.5,
+		},
+	},
+};
+const buttonVariants = {
+	hidden: {
+		x: -400,
+		opacity: 0,
+	},
+	visible: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 3,
+		},
+	},
+};
+
+const imageVariants = {
+	hidden: {
+		x: 700,
+		opacity: 0,
+	},
+	visible: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 3,
+		},
+	},
+};
 const Home = () => {
 	return (
 		<Box
@@ -29,17 +102,37 @@ const Home = () => {
 						textAlign: { xs: 'center', md: 'initial' },
 					}}>
 					<Stack className="text red-text">
-						<Typography variant="body1">Hi there, my name is</Typography>
 						<Typography
+							component={motion.p}
+							variants={myVariants}
+							initial="hidden"
+							animate="visible"
+							variant="body1">
+							Hi there, my name is
+						</Typography>
+						<Typography
+							component={motion.h1}
+							variants={nameVariants}
+							initial="hidden"
+							animate="visible"
 							variant="h1"
 							sx={{ fontSize: '4rem', fontWeight: '700' }}>
 							Hossam Mahmoud
 						</Typography>
-						<Typography variant="body1">
+						<Typography
+							component={motion.p}
+							variant="body1"
+							variants={titleVariants}
+							initial="hidden"
+							animate="visible">
 							I am a frontend web developer
 						</Typography>
 					</Stack>
-					<a href="mailto:hossamkheder9999@gmail.com">
+					<motion.a
+						variants={buttonVariants}
+						initial="hidden"
+						animate="visible"
+						href="mailto:hossamkheder9999@gmail.com">
 						<CustomButton
 							beforeWidth={'0%'}
 							beforeBgColorHover="var(--red-text)"
@@ -47,13 +140,16 @@ const Home = () => {
 							textColor="var(--white-text)"
 							content="Get in touch"
 						/>
-					</a>
+					</motion.a>
 				</Stack>
 
 				<Box
 					className="personalImage"
 					sx={{ display: { xs: 'none', md: 'block' } }}>
-					<img
+					<motion.img
+						variants={imageVariants}
+						initial="hidden"
+						animate="visible"
 						style={{
 							filter: 'drop-shadow(2px 4px 12px rgba(0,0,0,0.50))',
 							width: '100%',

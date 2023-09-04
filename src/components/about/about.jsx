@@ -5,6 +5,7 @@ import CustomButton from '../../layouts/customButton';
 import { styled } from 'styled-components';
 import { data } from '../../data/aboutData';
 import CV from '../../assets/CV/Hossam Mahmoud CV_Frontend.pdf';
+import { motion } from 'framer-motion';
 
 const CustomizeStack = styled(Stack)`
 	position: relative;
@@ -22,6 +23,64 @@ const CustomizeStack = styled(Stack)`
 		}
 	}
 `;
+
+const infoVariant = {
+	hidden: {
+		transform: 'translateX(100%)',
+	},
+	visible: {
+		transform: 'translateX(0%)',
+		transition: {
+			delay: 2.5,
+			type: 'spring',
+			duration: 1.5,
+		},
+	},
+};
+
+const buttonVariant = {
+	hidden: {
+		transform: 'translateY(100%)',
+	},
+	visible: {
+		transform: 'translateY(0%)',
+		transition: {
+			delay: 2.9,
+			type: 'spring',
+			duration: 1.5,
+		},
+	},
+};
+
+const sideVariant = {
+	hidden: {
+		transform: 'scale(0)',
+	},
+	visible: {
+		transform: 'scale(1)',
+		transition: {
+			duration: 1,
+			type: 'spring',
+			delay: 1.7,
+		},
+	},
+};
+
+const handVariants = {
+	hidden: {
+		rotate: 8,
+	},
+	visible: {
+		rotate: -8,
+		transition: {
+			repeat: 8,
+			repeatType: 'reverse',
+			duration: 3,
+			type: 'spring',
+			stiffness: 500,
+		},
+	},
+};
 const About = () => {
 	return (
 		<Box className="about container black-container">
@@ -41,13 +100,36 @@ const About = () => {
 					sx={{
 						width: { xs: '100%', lg: '60%' },
 						alignItems: { xs: 'center', sm: 'flex-start' },
+						overflow: 'hidden',
 					}}>
 					<Typography
+						component={motion.p}
+						variants={infoVariant}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
 						variant="body1"
 						sx={{ fontSize: { xs: '16px', lg: '20px' } }}
 						className="gray-text">
 						<h3>
-							Hello, I'm Hossam<span>👋</span>
+							Hello, I'm Hossam
+							<span
+								style={{
+									display: 'inline-block',
+									marginLeft: '5px',
+									paddingBottom: '5px',
+									transform: 'translateY(-5px)',
+								}}>
+								<motion.span
+									style={{
+										display: 'inline-block',
+										transformOrigin: ' bottom right ',
+									}}
+									variants={handVariants}
+									whileInView="visible">
+									👋
+								</motion.span>
+							</span>
 						</h3>
 						<p>
 							I'm a junior frontend developer with a passion for creating
@@ -63,8 +145,12 @@ const About = () => {
 							skills.
 						</p>
 					</Typography>
-					<a
+					<motion.a
 						href={CV}
+						variants={buttonVariant}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
 						download="Hossam Mahmoud CV_Frontend"
 						target="_blank"
 						rel="noreferrer"
@@ -75,36 +161,57 @@ const About = () => {
 							hoverColor="var(--white-text)"
 							textColor="black"
 							content="Download my CV"></CustomButton>
-					</a>
+					</motion.a>
 				</Stack>
 				<CustomizeStack
-					spacing={7}
-					sx={{ display: { xs: 'none', lg: 'flex' } }}
+					as={motion.div}
+					variants={sideVariant}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					sx={{
+						display: { xs: 'none', lg: 'flex' },
+						transformOrigin: 'center',
+					}}
 					justifyContent="center">
-					{data.map((el) => {
-						return (
-							<Stack
-								direction="row"
-								spacing={1}
-								alignItems="center"
-								key={el.id}>
-								<Typography
-									variant="body1"
-									fontSize="1rem"
-									className="white-text"
-									fontWeight="bold">
-									{el.name}:
-								</Typography>
-								<Typography
-									variant="body2"
-									fontSize="1rem"
-									className="gray-text"
-									lineHeight="0">
-									{el.value}
-								</Typography>
-							</Stack>
-						);
-					})}
+					<Stack
+						spacing={7}
+						overflow="hidden"
+						sx={{
+							display: { xs: 'none', lg: 'flex' },
+						}}>
+						{data.map((el, index) => {
+							let delay = index;
+							delay += 3.6;
+							return (
+								<Stack
+									component={motion.div}
+									initial={{ transform: 'translateX(-120%)' }}
+									whileInView={{ transform: 'translateX(0%)' }}
+									transition={{ duration: 0.8, type: 'spring', delay: delay }}
+									viewport={{ once: true }}
+									direction="row"
+									spacing={1}
+									alignItems="center"
+									key={el.id}>
+									<Typography
+										variant="body1"
+										fontSize="1rem"
+										className="white-text"
+										fontWeight="bold">
+										{el.name}:
+									</Typography>
+									<Typography
+										variant="body2"
+										fontSize="1rem"
+										className="gray-text"
+										lineHeight="0">
+										{el.value}
+									</Typography>
+								</Stack>
+							);
+						})}
+					</Stack>
 				</CustomizeStack>
 			</Stack>
 		</Box>
