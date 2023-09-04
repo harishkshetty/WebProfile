@@ -38,15 +38,16 @@ const Services = () => {
 				justifyContent="space-between"
 				gap={10}>
 				{data.map((el) => {
-					let transform = el.name === 'Web Design' ? -520 : 520;
+					let transform =
+						el.name === 'Web Design' ? 'translateX(-60%)' : 'translateX(60%)';
 					return (
 						<StyledStack
 							as={motion.div}
 							initial={{
-								x: transform,
+								transform: transform,
 								opacity: 0,
 							}}
-							whileInView={{ x: 0, opacity: 1 }}
+							whileInView={{ transform: 'translateX(0%)', opacity: 1 }}
 							transition={{
 								delay: 1.5,
 								duration: 1.5,
