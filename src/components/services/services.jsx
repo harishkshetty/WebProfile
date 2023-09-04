@@ -49,7 +49,7 @@ const Services = () => {
 							}}
 							whileInView={{ transform: 'translateX(0%)', opacity: 1 }}
 							transition={{
-								delay: 1.5,
+								delay: 1,
 								duration: 1.5,
 							}}
 							viewport={{ once: true }}
