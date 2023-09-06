@@ -20,12 +20,48 @@ const Circle = styled(Box)`
 	align-items: center;
 `;
 
-const StyledQuote = styled(Quote)`
+const StyledQuote = css`
 	&& {
 		position: absolute;
 		fill: var(--icons-colors);
 		width: 150px;
 		opacity: 0.2;
+	}
+`;
+
+const StyledLeftQuote = styled(Quote)`
+	${StyledQuote}
+
+	left: 30rem;
+	top: 10rem;
+	transform: rotate(-177.306deg);
+
+	@media (max-width: 800px) {
+		& {
+			left: 10rem;
+		}
+	}
+	@media (max-width: 750px) {
+		& {
+			left: 1rem;
+		}
+	}
+`;
+
+const StyledRightQuote = styled(Quote)`
+	${StyledQuote}
+	right: 26rem;
+	bottom: 7rem;
+	transform: rotate(3.827deg);
+	@media (max-width: 800px) {
+		& {
+			right: 10rem;
+		}
+	}
+	@media (max-width: 750px) {
+		& {
+			right: 1rem;
+		}
 	}
 `;
 
@@ -97,18 +133,8 @@ const Testimonials = () => {
 			className="testimonials container second-black-container"
 			sx={{ position: 'relative', paddingBottom: '2rem' }}>
 			{/* quotes icons in the background */}
-			{/* <StyledQuote
-				style={{
-					left: '26rem',
-					top: '10rem',
-					transform: 'rotate(-177.306deg)',
-				}}></StyledQuote>
-			<StyledQuote
-				style={{
-					right: '26rem',
-					bottom: '7rem',
-					transform: 'rotate(3.827deg)',
-				}}></StyledQuote> */}
+			<StyledLeftQuote></StyledLeftQuote>
+			<StyledRightQuote></StyledRightQuote>
 			<Heading
 				headerText="Testimonials"
 				id="testimonials"

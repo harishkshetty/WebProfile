@@ -31,9 +31,9 @@ const infoVariant = {
 	visible: {
 		transform: 'translateX(0%)',
 		transition: {
-			delay: 2.5,
+			delay: 1.5,
 			type: 'spring',
-			duration: 1.5,
+			duration: 1,
 		},
 	},
 };
@@ -45,9 +45,9 @@ const buttonVariant = {
 	visible: {
 		transform: 'translateY(0%)',
 		transition: {
-			delay: 2.9,
+			delay: 1.5,
 			type: 'spring',
-			duration: 1.5,
+			duration: 1,
 		},
 	},
 };
@@ -61,7 +61,7 @@ const sideVariant = {
 		transition: {
 			duration: 1,
 			type: 'spring',
-			delay: 1.7,
+			delay: 1,
 		},
 	},
 };
@@ -182,7 +182,7 @@ const About = () => {
 						}}>
 						{data.map((el, index) => {
 							let delay = index;
-							delay += 3.6;
+							delay += 2.5;
 							return (
 								<Stack
 									component={motion.div}

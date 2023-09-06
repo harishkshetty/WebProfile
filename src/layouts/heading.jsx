@@ -42,7 +42,7 @@ const headingVariant = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 1.5,
+			duration: 1,
 			type: 'spring',
 			delay: 0.2,
 		},
@@ -57,7 +57,7 @@ const barVariant = {
 		transform: 'translateX(-50%) scale(1)',
 		origin: 'center',
 		transition: {
-			duration: 1,
+			duration: 0.5,
 			type: 'tween',
 			delay: 1,
 		},

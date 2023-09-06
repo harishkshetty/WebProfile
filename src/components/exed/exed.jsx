@@ -15,7 +15,8 @@ const namesVarinats = {
 		transform: 'translateX(0%)',
 		transition: {
 			delay: 1,
-			duration: 0.5,
+			duration: 1.3,
+			type: 'spring',
 		},
 	},
 };
@@ -27,7 +28,8 @@ const detailsVarinats = {
 		transform: 'translateX(0%)',
 		transition: {
 			delay: 1,
-			duration: 0.5,
+			duration: 1,
+			type: 'spring',
 		},
 	},
 };
