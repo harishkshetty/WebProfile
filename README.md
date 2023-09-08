@@ -75,4 +75,5 @@ Feel free to reach out to me:
 - LinkedIn: [Hossam Mahmoud](https://www.linkedin.com/in/hossam-mahmoud/)
 - Email: hossamkheder9999@gmail.com
 
-Let's connect and discuss your next project!
+Let's connect and discuss your next project!.
+Give me a start ⭐ if you liked my portfolio
