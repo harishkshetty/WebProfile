@@ -51,8 +51,8 @@ const StarMessage = ({ active }) => {
 	const [acitve, setActive] = useState(false);
 
 	useEffect(() => {
-		let cookieValue = JSON.parse(Cookies.get('starred'));
-		if (!cookieValue) {
+		// let cookieValue = JSON.parse(Cookies.get('starred'));
+		if (Cookies.get('starred') === 'false') {
 			setTimeout(() => {
 				setActive(true);
 			}, 15000);
