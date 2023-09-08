@@ -24,39 +24,44 @@ const StarButton = () => {
 	const [starred, setStarred] = useState(false);
 	const [loading, setLoading] = useState(false);
 
-	const handleClick = () => {
-		const url = `https://api.github.com/user/starred/HossamMahmoudKhedr/hossam_mahmoud_portfolio`;
+	// Cookies.remove('starred');
+	// const handleClick = () => {
+	// 	const url = `https://api.github.com/user/starred/HossamMahmoudKhedr/hossam_mahmoud_portfolio`;
 
-		const headers = {
-			Authorization: `token ${process.env.REACT_APP_SECRET}`,
-			'Content-Length': '0',
-		};
+	// 	const headers = {
+	// 		Authorization: `token ${process.env.REACT_APP_SECRET}`,
+	// 		'Content-Length': '0',
+	// 	};
 
-		if (!starred) {
-			fetch(url, {
-				method: 'PUT',
-				headers: headers,
-			})
-				.then((response) => {
-					if (response.status === 204) {
-						setStarred(true);
-						setLoading(true);
-						setTimeout(() => {
-							setLoading(false);
-						}, 2000);
-					} else {
-						setStarred(true);
-					}
-					Cookies.set('starred', true, { expires: 365 * 10 });
-				})
-				.catch((error) => {
-					console.error('Error starring repository:', error);
-				});
-		}
-	};
+	// 	if (!starred) {
+	// 		fetch(url, {
+	// 			method: 'PUT',
+	// 			headers: headers,
+	// 		})
+	// 			.then((response) => {
+	// 				if (response.status === 204) {
+	// 					setStarred(true);
+	// 					setLoading(true);
+	// 					setTimeout(() => {
+	// 						setLoading(false);
+	// 					}, 2000);
+	// 				} else {
+	// 					setStarred(true);
+	// 				}
+	// 				Cookies.set('starred', true, { expires: 365 * 10 });
+	// 			})
+	// 			.catch((error) => {
+	// 				console.error('Error starring repository:', error);
+	// 			});
+	// 	}
+	// };
+
+	// const handleClick = () => {
+	// 	Cookies.set('starred', true, { expires: 365 * 10 });
+	// };
 	return (
 		<StyledButton
-			onClick={handleClick}
+			// onClick={handleClick}
 			variant="contained">
 			{!starred && '⭐ Star'}
 			{loading && (

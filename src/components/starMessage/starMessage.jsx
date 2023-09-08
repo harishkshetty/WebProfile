@@ -62,6 +62,11 @@ const StarMessage = ({ active }) => {
 	const handleClick = () => {
 		setActive(false);
 	};
+
+	const close = () => {
+		Cookies.set('starred', true, { expires: 365 * 10 });
+		setActive(false);
+	};
 	return (
 		<StyledMessage
 			className="star"
@@ -76,7 +81,13 @@ const StarMessage = ({ active }) => {
 				<Typography variant="body1">
 					If you liked my portfolio, Give me a star to my repository
 				</Typography>
-				<StarButton />
+				<a
+					href="https://github.com/HossamMahmoudkhedr/hossam_mahmoud_portfolio"
+					target="_blank"
+					re="noreferrer"
+					onClick={close}>
+					<StarButton />
+				</a>
 			</Stack>
 		</StyledMessage>
 	);
