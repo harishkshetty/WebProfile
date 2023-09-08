@@ -137,13 +137,13 @@ const Nav = () => {
 				</MenuContainer>
 
 				<Sytledlinks clicked={clicked}>
-					<li>
+					{/* <li>
 						<SytledlinksItems
 							href="#home"
 							onClick={handleLinkClick}>
 							Home
 						</SytledlinksItems>
-					</li>
+					</li> */}
 					<li>
 						<SytledlinksItems
 							href="#about"

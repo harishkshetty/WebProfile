@@ -59,4 +59,18 @@ div.activeBox {
 		max-width: 1550px;
 		margin: 0px auto;
 	}
+	.container {
+		position: relative;
+	}
+	.container::before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		z-index: -1;
+		transform: translateX(-50%);
+		width: 99.3vw;
+		height: 100%;
+		background-color: inherit;
+	}
 }

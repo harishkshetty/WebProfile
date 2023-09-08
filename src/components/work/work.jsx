@@ -60,7 +60,7 @@ const Work = () => {
 			className="work container second-black-container"
 			sx={{
 				height: projectHeight,
-				overflow: 'hidden',
+				overflowY: 'clip',
 				position: 'relative',
 				transition: 'all 0.5s linear',
 			}}>
