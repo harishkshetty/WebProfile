@@ -26,10 +26,9 @@ const StarButton = () => {
 
 	const handleClick = () => {
 		const url = `https://api.github.com/user/starred/HossamMahmoudKhedr/hossam_mahmoud_portfolio`;
-		const token = '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';
 
 		const headers = {
-			Authorization: `token ${token}`,
+			Authorization: `token ${process.env.REACT_APP_SECRET}`,
 			'Content-Length': '0',
 		};
 

@@ -52,7 +52,8 @@ const StarMessage = ({ active }) => {
 
 	useEffect(() => {
 		// let cookieValue = JSON.parse(Cookies.get('starred'));
-		if (Cookies.get('starred') === 'false') {
+
+		if (Cookies.get('starred') == undefined) {
 			setTimeout(() => {
 				setActive(true);
 			}, 15000);
