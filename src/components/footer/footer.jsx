@@ -75,7 +75,7 @@ const Footer = () => {
 						/>
 					</a>
 					<a
-						href="https://twitter.com/hossam_mahmoudd"
+						href="https://twitter.com/HossamKhedr01"
 						target="_blank"
 						rel="noreferrer">
 						<img
