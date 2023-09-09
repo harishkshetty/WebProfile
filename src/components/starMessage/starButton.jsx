@@ -3,6 +3,7 @@ import { Button } from '@mui/material';
 import { styled } from 'styled-components';
 // import CircularProgress from '@mui/material/CircularProgress';
 import Cookies from 'js-cookie';
+import { motion } from 'framer-motion';
 
 const StyledButton = styled(Button)`
 	&& {
@@ -32,10 +33,6 @@ const StyledLink = styled.a`
 	overflow: hidden;
 	width: 40px;
 	transition: all 0.2s linear;
-
-	&:hover {
-		width: 95px;
-	}
 `;
 const StarButton = () => {
 	// const [starred, setStarred] = useState(false);
@@ -78,6 +75,11 @@ const StarButton = () => {
 	// };
 	return (
 		<StyledLink
+			as={motion.a}
+			initial={{ width: '0px' }}
+			animate={{ width: '40px' }}
+			transition={{ duration: 0.2 }}
+			whileHover={{ width: '95px' }}
 			href="https://github.com/HossamMahmoudkhedr/hossam_mahmoud_portfolio"
 			target="_blank"
 			re="noreferrer">
