@@ -93,7 +93,7 @@ const Skills = () => {
 					component={motion.div}
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
-					transition={{ duration: 1.5 }}
+					transition={{ duration: 1, delay: 0.4 }}
 					viewport={{ once: true }}
 					key={chosenSkill.id}
 					borderRadius="10px"
