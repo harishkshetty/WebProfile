@@ -58,7 +58,8 @@ const Services = () => {
 							<Typography
 								variant="h4"
 								color="var(--white-text)"
-								fontSize="2rem">
+								fontSize="1.8rem"
+								marginBottom="0.5rem">
 								{el.name}
 							</Typography>
 							<Typography

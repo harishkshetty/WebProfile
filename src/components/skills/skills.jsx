@@ -49,7 +49,7 @@ const Skills = () => {
 						padding: { xs: '0', lg: 'initial' },
 						flexDirection: { xs: 'row', lg: 'column' },
 						flexWrap: { xs: 'wrap', lg: 'nowrap' },
-						justifyContent: { xs: 'center', lg: 'unset' },
+						justifyContent: { xs: 'unset', md: 'center', lg: 'unset' },
 					}}>
 					{skills.map((skill, index) => {
 						return (
@@ -58,6 +58,7 @@ const Skills = () => {
 								sx={{
 									flexDirection: { xs: 'row-reverse', lg: 'row' },
 									direction: { xs: 'rtl', lg: 'ltr' },
+									width: { xs: '120px', md: 'unset' },
 								}}>
 								<TimelineSeparator
 									sx={{
