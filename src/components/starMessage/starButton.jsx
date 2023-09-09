@@ -1,30 +1,47 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import { styled } from 'styled-components';
-import CircularProgress from '@mui/material/CircularProgress';
+// import CircularProgress from '@mui/material/CircularProgress';
 import Cookies from 'js-cookie';
 
 const StyledButton = styled(Button)`
 	&& {
-		background: transparent;
-		box-shadow: 0px 0px 6px 2px rgb(255 255 255 / 29%),
-			0px 0px 6px 2px rgb(57 6 64 / 47%);
+		padding: 10px 13px;
+		background: linear-gradient(45deg, #02022b 35%, #353548 90%);
+		// box-shadow: 0px 0px 6px 2px rgb(255 255 255 / 29%),
+		// 	0px 0px 6px 2px rgb(57 6 64 / 47%);
 		transition: all 0.2s linear;
 		width: fit-content;
+		display: flex;
+		gap: 0.8rem;
+		border-radius: 10px 0 0 10px;
 	}
 
-	&&:hover {
-		background: rgb(36 36 62 / 81%);
-		box-shadow: 0px 0px 6px 2px rgb(255 255 255 / 35%),
-			0px 0px 6px 2px rgb(57 6 64 / 55%);
-	}
+	// &&:hover {
+	// background: rgb(36 36 62 / 81%);
+	// box-shadow: 0px 0px 6px 2px rgb(255 255 255 / 35%),
+	// 	0px 0px 6px 2px rgb(57 6 64 / 55%);
+	// }
 `;
 
-const StarButton = () => {
-	const [starred, setStarred] = useState(false);
-	const [loading, setLoading] = useState(false);
+const StyledLink = styled.a`
+	position: fixed;
+	top: 15%;
+	right: 0;
+	z-index: 9;
+	overflow: hidden;
+	width: 40px;
+	transition: all 0.2s linear;
 
-	// Cookies.remove('starred');
+	&:hover {
+		width: 95px;
+	}
+`;
+const StarButton = () => {
+	// const [starred, setStarred] = useState(false);
+	// const [loading, setLoading] = useState(false);
+
+	Cookies.remove('starred');
 	// const handleClick = () => {
 	// 	const url = `https://api.github.com/user/starred/HossamMahmoudKhedr/hossam_mahmoud_portfolio`;
 
@@ -60,18 +77,24 @@ const StarButton = () => {
 	// 	Cookies.set('starred', true, { expires: 365 * 10 });
 	// };
 	return (
-		<StyledButton
-			// onClick={handleClick}
-			variant="contained">
-			{!starred && '⭐ Star'}
-			{loading && (
-				<CircularProgress
-					color="secondary"
-					size="25px"
-				/>
-			)}
-			{!loading && starred && 'Thanks for your support 😄'}
-		</StyledButton>
+		<StyledLink
+			href="https://github.com/HossamMahmoudkhedr/hossam_mahmoud_portfolio"
+			target="_blank"
+			re="noreferrer">
+			<StyledButton
+				// onClick={handleClick}
+				variant="contained">
+				<span>⭐</span> <p> Star</p>
+				{/* {!starred && '⭐ Star'} */}
+				{/* {loading && (
+					<CircularProgress
+						color="secondary"
+						size="25px"
+					/>
+				)} */}
+				{/* {!loading && starred && 'Thanks for your support 😄'} */}
+			</StyledButton>
+		</StyledLink>
 	);
 };
 
