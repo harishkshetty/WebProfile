@@ -162,7 +162,7 @@ const Exed = () => {
 					height="100%"
 					justifyContent="center">
 					<Stack overflow="hidden">
-						{data.map((ex) => {
+						{data.map((ex, idx) => {
 							return (
 								<Box
 									component={motion.div}
@@ -173,11 +173,11 @@ const Exed = () => {
 									id={ex.name}
 									key={ex.id}
 									onClick={handleExperienceClick}
-									className={`${status} ${ex.id === 1 ? 'activeBox' : ''}`}
+									className={`${status} ${idx === 0 ? 'activeBox' : ''}`}
 									sx={{
 										cursor: 'pointer',
 										borderBottom: `${
-											ex.id < data.length ? '1px solid var(--white-text)' : ''
+											idx < data.length - 1 ? '1px solid var(--white-text)' : ''
 										}`,
 										padding: '4rem 2rem',
 										textAlign: 'center',
@@ -257,6 +257,7 @@ const Exed = () => {
 											letterSpacing="1.3px"
 											sx={{
 												fontSize: { xs: '0.8rem', lg: 'initial' },
+												marginBottom: '0.5rem',
 											}}>
 											{item}
 										</Typography>
@@ -271,16 +272,18 @@ const Exed = () => {
 								marginTop: '1rem',
 								fontWeight: '500',
 								fontSize: { xs: '1rem', lg: 'initial' },
-							}}>
-							{chosenElement.moreInfo.title}
-						</Typography>
+							}}
+							dangerouslySetInnerHTML={{
+								__html: chosenElement.moreInfo.title,
+							}}></Typography>
 						<Typography
 							variant="overline"
 							sx={{
 								fontSize: { xs: '0.7rem', lg: 'initial' },
-							}}>
-							{chosenElement.moreInfo.text}
-						</Typography>
+							}}
+							dangerouslySetInnerHTML={{
+								__html: chosenElement.moreInfo.text,
+							}}></Typography>
 					</Stack>
 				</Stack>
 				{/* watch out */}

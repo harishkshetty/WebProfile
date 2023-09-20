@@ -1,27 +1,5 @@
 export const exData = [
 	{
-		id: 1,
-		name: 'ALX Africa',
-		type: 'Internship',
-		about: {
-			date: 'April 2023 - present',
-			info: 'ALX is a leading technology training provider, built to accelerate the careers of young Africans through the technology and professional skills that enable them to thrive in the digital economy.',
-			subTitle: 'What am I learning in this internship?',
-			list: [
-				'Problem-solve using coding and other forms of technology',
-				'Develop design systems and gather information on project limitations, capabilities, performance requirements, and interfaces',
-				'Model a system or application to help developers write the code they needed to complete their tasks',
-				'Calculate, recommend, and plan computer specifications, layouts, and peripheral equipment modifications through analysis and recommendation',
-				'Analyse system capabilities and requirements by storing, retrieving, and manipulating data',
-				'Key professional competencies such as project management, critical thinking, creative problem solving, interview techniques, communication, and collaboration skills',
-			],
-		},
-		moreInfo: {
-			title: 'Programming Languages learned in this internship: ',
-			text: 'C, Python, HTML, CSS, JavaScript, React.js, SQL, Typescript',
-		},
-	},
-	{
 		id: 2,
 		name: 'Frontend Freelancer',
 		type: 'Freelance',
@@ -39,4 +17,47 @@ export const exData = [
 			text: '',
 		},
 	},
+	{
+		id: 3,
+		name: 'Frontend Intern',
+		type: 'Internship',
+		about: {
+			date: 'September 2023 - October 2023',
+			info: 'As a Frontend Intern at CodeClause Company, I had the opportunity to work on various web development projects and enhance my skills',
+			subTitle: 'My duties in this internship',
+			list: [
+				'Project Work: During the internship, I was assigned projects categorized into two sections: basic projects and golden projects. I successfully completed 4 projects. These projects allowed me to apply my knowledge of HTML, CSS, JavaScript, React, API and frontend development principles.',
+				"GitHub Repository: I created and maintained a GitHub repository named 'CodeClauseInternship_ProjectName' for each project. This experience helped me become proficient in version control and collaborative development using Git.",
+				'LinkedIn Profile: I updated my LinkedIn profile to showcase my intern status and shared my project completion updates. This not only boosted my LinkedIn presence but also attracted the attention of recruiters and potential employers.',
+			],
+		},
+		moreInfo: {
+			title:
+				'Projects I worked on: To-do list, Timer and Stopwatch, Youtube Clone, and System survey',
+			text: 'Offer Letter: <a style="color: #9149c4;" href="https://drive.google.com/file/d/1npXnQ4h0D30kRo5BeA83ge87fctsHtea/view" target="_blank" rel="noreferrer">Offer link</a>',
+		},
+	},
 ];
+
+// {
+// 		id: 1,
+// 		name: 'ALX Africa',
+// 		type: 'Internship',
+// 		about: {
+// 			date: 'April 2023 - present',
+// 			info: 'ALX is a leading technology training provider, built to accelerate the careers of young Africans through the technology and professional skills that enable them to thrive in the digital economy.',
+// 			subTitle: 'What am I learning in this internship?',
+// 			list: [
+// 				'Problem-solve using coding and other forms of technology',
+// 				'Develop design systems and gather information on project limitations, capabilities, performance requirements, and interfaces',
+// 				'Model a system or application to help developers write the code they needed to complete their tasks',
+// 				'Calculate, recommend, and plan computer specifications, layouts, and peripheral equipment modifications through analysis and recommendation',
+// 				'Analyse system capabilities and requirements by storing, retrieving, and manipulating data',
+// 				'Key professional competencies such as project management, critical thinking, creative problem solving, interview techniques, communication, and collaboration skills',
+// 			],
+// 		},
+// 		moreInfo: {
+// 			title: 'Programming Languages learned in this internship: ',
+// 			text: 'C, Python, HTML, CSS, JavaScript, React.js, SQL, Typescript',
+// 		},
+// 	},
