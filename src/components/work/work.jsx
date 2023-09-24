@@ -1,8 +1,8 @@
 import { Box, Stack, Typography, Button } from '@mui/material';
 import React, { useState } from 'react';
-import Heading from '../../layouts/heading';
+import Heading from '../../utils/heading';
 import { projData } from '../../data/projectsData';
-import CustomButton from '../../layouts/customButton';
+import CustomButton from '../../utils/customButton';
 import { styled } from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -159,6 +159,7 @@ const Work = () => {
 								<img
 									src={require(`../../assets/images/${project.image}`)}
 									alt={project.name}
+									loading="eager"
 									style={{
 										width: '100%',
 										objectFit: 'cover',

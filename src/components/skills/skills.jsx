@@ -102,24 +102,37 @@ const Skills = () => {
 						width: { xs: '100%', lg: '74%' },
 						padding: { xs: '2rem 1.5rem', lg: '3rem 5.5rem' },
 					}}>
-					<Stack gap="0.5rem">
-						<Typography
-							variant="h4"
-							fontWeight="700"
-							sx={{ fontSize: { xs: '2', lg: '2.6' } }}
-							color="var(--white-text)">
-							{chosenSkill.name}
-						</Typography>
-						<Typography
-							variant="body1"
-							color="var(--white-text)"
-							letterSpacing="1.3px"
-							lineHeight="1.8"
-							sx={{ fontSize: { xs: '0.9rem', lg: '1rem' } }}>
-							{chosenSkill.info}
-						</Typography>
+					<Stack
+						justifyContent="space-between"
+						alignItems="center"
+						sx={{ gap: { xs: '3rem', md: '5rem', lg: '7rem' } }}>
+						<Stack gap="0.5rem">
+							<Typography
+								variant="h4"
+								fontWeight="700"
+								sx={{ fontSize: { xs: '2', lg: '2.6' } }}
+								color="var(--white-text)">
+								{chosenSkill.name}
+							</Typography>
+							<Typography
+								variant="body1"
+								color="var(--white-text)"
+								letterSpacing="1.3px"
+								lineHeight="1.8"
+								sx={{ fontSize: { xs: '0.9rem', lg: '1rem' } }}>
+								{chosenSkill.info}
+							</Typography>
+						</Stack>
+						<Box
+							direction="row"
+							sx={{
+								transform: { xs: 'scale(2)', md: 'scale(3)', lg: 'scale(5)' },
+								opacity: '0.3',
+								marginBottom: { xs: '1rem', lg: 'unset' },
+							}}>
+							{chosenSkill.icon}
+						</Box>
 					</Stack>
-					<Stack direction="row">{chosenSkill.icon}</Stack>
 				</Stack>
 			</Stack>
 		</Box>

@@ -10,6 +10,14 @@ export const testimonials = [
 	},
 	{
 		id: 2,
+		name: 'Faisal Jehad',
+		country: 'Saudi Arabia',
+		opinion:
+			'Very professional and cooperative. I look forward to working with him again',
+		rate: [<Star />, <Star />, <Star />, <Star />, <Star />],
+	},
+	{
+		id: 3,
 		name: 'Nourhan Shakir',
 		country: 'Egypt',
 		opinion:

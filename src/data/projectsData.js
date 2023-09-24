@@ -1,55 +1,19 @@
-import { ReactComponent as Axios } from '../assets/icons/axios.svg';
-import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
-import { ReactComponent as CSS } from '../assets/icons/css3-alt.svg';
-import { ReactComponent as MUI } from '../assets/icons/MaterialUI.svg';
-import { ReactComponent as JavaScript } from '../assets/icons/square-js.svg';
-import { ReactComponent as HTML } from '../assets/icons/html5.svg';
-let height = '40px';
-let width = '50px';
-const icons = {
-	html: (
-		<HTML
-			width={width}
-			height={height}
-		/>
-	),
-	css: (
-		<CSS
-			width={width}
-			height={height}
-		/>
-	),
-	javascript: (
-		<JavaScript
-			width={width}
-			height={height}
-		/>
-	),
-	react: (
-		<ReactIcon
-			width={width}
-			height={height}
-		/>
-	),
-	mui: (
-		<MUI
-			width={width}
-			height={height}
-			transform="scale(0.8)"
-		/>
-	),
-	axios: (
-		<Axios
-			width={width}
-			height={height}
-			transform="scale(4.5)"
-		/>
-	),
-};
+import { icons } from '../utils/icons';
 
 export const projData = [
 	{
 		id: 1,
+		name: 'Theme Consulting',
+		describtion:
+			'created a captivating landing page for a business management company, effectively showcasing their essential information, vision, values, goals, core message, and comprehensive range of services.',
+		languages: [icons.html, icons.css, icons.bootstrap, icons.javascript],
+		image: 'theme-consulting.png',
+		link: 'https://theme-consulting1.vercel.app/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/theme-consulting',
+		done: true,
+	},
+	{
+		id: 2,
 		name: 'CValue',
 		describtion:
 			'A website to create your professional CV with the power of AI, ensuring it passes the ATS test and boosts your chances of securing that crucial first interview.',
@@ -60,7 +24,7 @@ export const projData = [
 		done: false,
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Portfolio Website',
 		describtion:
 			'Explore the comprehensive portfolio website of an accomplished Architecture Engineer, showcasing her diverse skill set, extensive experience, and notable educational background.',
@@ -72,7 +36,7 @@ export const projData = [
 		done: true,
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Light Plus',
 		describtion:
 			"Fine-tuned the visual aspects of the theme. Through CSS modifications, I optimized the typography, and color palette to align with the brand's identity. Integrated JavaScript enhancements to improve user interactions.",
@@ -83,7 +47,7 @@ export const projData = [
 		done: true,
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Fit Club',
 		describtion:
 			'Create a dynamic and responsive landing page for a prominent gym, showcasing its comprehensive array of services, pricing details, and indepth information. By adeptly utilizing React for front-end development and CSS for styling.',
@@ -94,7 +58,7 @@ export const projData = [
 		done: true,
 	},
 	{
-		id: 5,
+		id: 6,
 		name: 'Simah',
 		describtion:
 			"Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional e-commerce enterprise. This website serves as a virtual gateway, effectively conveying the company's core strengths.",
@@ -106,18 +70,18 @@ export const projData = [
 		done: true,
 	},
 	{
-		id: 6,
+		id: 7,
 		name: 'Bondi',
 		describtion:
 			"Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional e-commerce enterprise. This website serves as a virtual gateway, effectively conveying the company's core strengths.",
-		languages: [icons.html, icons.css, icons.bootStrap],
+		languages: [icons.html, icons.css, icons.bootstrap],
 		image: 'Bondi.png',
 		link: 'https://hossammahmoudkhedr.github.io/Bondi-Landing-Page/',
 		gitLink: 'https://github.com/HossamMahmoudkhedr/Bondi-Landing-Page',
 		done: true,
 	},
 	{
-		id: 7,
+		id: 8,
 		name: 'Book Store',
 		describtion:
 			'Crafted a compelling landing page utilizing React.js and pure CSS to represent an exceptional Book Store website. This website serves as a virtual gateway, and shows all the books which you can order any of them online.',
@@ -128,7 +92,7 @@ export const projData = [
 		done: true,
 	},
 	{
-		id: 8,
+		id: 9,
 		name: 'Shortly',
 		describtion:
 			'Crafted using HTML, CSS, and JavaScript, the website allows you to effortlessly transform lengthy website addresses into concise, user-friendly links.',

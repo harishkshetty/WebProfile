@@ -9,6 +9,7 @@ export const exData = [
 			subTitle: 'Notable Projects',
 			list: [
 				'Build a portfolio website for an architecture engineer',
+				'Build a landing page for a business management comapny',
 				'Improving the design of a store on Salla platform by incorporating customized CSS and JavaScript code',
 			],
 		},
@@ -19,7 +20,7 @@ export const exData = [
 	},
 	{
 		id: 3,
-		name: 'Frontend Intern',
+		name: 'Frontend Developer',
 		type: 'Internship',
 		about: {
 			date: 'September 2023 - October 2023',
