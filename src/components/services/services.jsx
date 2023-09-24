@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
-import Heading from '../../layouts/heading';
+import Heading from '../../utils/heading';
 import { data } from '../../data/servicesData';
 import { styled } from 'styled-components';
 import { motion } from 'framer-motion';

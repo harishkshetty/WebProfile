@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import Heading from '../../layouts/heading';
+import Heading from '../../utils/heading';
 import { exData } from '../../data/experienceData';
 import { edData } from '../../data/educationData';
 import { ReactComponent as ExperienceIcon } from '../../assets/icons/laptop-code-solid.svg';

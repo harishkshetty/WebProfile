@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
-import Heading from '../../layouts/heading';
-import CustomButton from '../../layouts/customButton';
+import Heading from '../../utils/heading';
+import CustomButton from '../../utils/customButton';
 import { styled } from 'styled-components';
 import { data } from '../../data/aboutData';
 import CV from '../../assets/CV/Hossam Mahmoud CV_Frontend.pdf';

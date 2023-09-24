@@ -1,6 +1,6 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import Heading from '../../layouts/heading';
+import Heading from '../../utils/heading';
 import { css, styled } from 'styled-components';
 import { ReactComponent as Person } from '../../assets/icons/user-tie-solid.svg';
 import { ReactComponent as Quote } from '../../assets/icons/quote-left-solid.svg';

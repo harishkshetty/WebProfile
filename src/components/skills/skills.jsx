@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import Heading from '../../layouts/heading';
+import Heading from '../../utils/heading';
 import { styled } from 'styled-components';
 import { skills } from '../../data/skillsData';
 import {
