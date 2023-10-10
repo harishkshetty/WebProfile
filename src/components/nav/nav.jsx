@@ -3,6 +3,7 @@ import { Box, Stack } from '@mui/material';
 import LogoImage from '../../assets/images/Logo.png';
 import { styled } from 'styled-components';
 import { motion } from 'framer-motion';
+import Palestine from '../palestine/palestine';
 
 const Sytledlinks = styled.ul`
 	display: flex;
@@ -98,6 +99,7 @@ const Nav = () => {
 				position: 'relative',
 				zIndex: 1,
 			}}>
+			<Palestine />
 			<Stack
 				direction="row"
 				sx={{
