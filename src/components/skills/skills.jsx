@@ -128,7 +128,7 @@ const Skills = () => {
 							sx={{
 								transform: { xs: 'scale(2)', md: 'scale(3)', lg: 'scale(5)' },
 								opacity: '0.3',
-								marginBottom: { xs: '1rem', lg: 'unset' },
+								marginBottom: { xs: '1rem', lg: '3rem' },
 							}}>
 							{chosenSkill.icon}
 						</Box>

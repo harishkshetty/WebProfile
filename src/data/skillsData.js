@@ -37,15 +37,20 @@ export const skills = [
 		icon: icons.bootstrap,
 	},
 	{
-		id: 7,
-		name: 'SASS',
-		info: 'Proficient in using SASS to write modular and maintainable CSS code. Skilled in leveraging SASS features like variables, mixins, and nesting to improve efficiency and code organization. Experienced in utilizing SASS frameworks and building reusable stylesheets for large-scale projects.',
-		icon: icons.sass,
-	},
-	{
 		id: 8,
 		name: 'Git',
 		info: 'Proficient in utilizing Git for version control and collaboration. Skilled in managing repositories, branching, merging, and resolving conflicts. Experienced in leveraging GitHub for project hosting, issue tracking, and contributing to open-source projects. Knowledgeable in Git workflows, including feature branching and pull request-based development.',
 		icon: icons.git,
 	},
 ];
+
+/*
+
+{
+		id: 7,
+		name: 'SASS',
+		info: 'Proficient in using SASS to write modular and maintainable CSS code. Skilled in leveraging SASS features like variables, mixins, and nesting to improve efficiency and code organization. Experienced in utilizing SASS frameworks and building reusable stylesheets for large-scale projects.',
+		icon: icons.sass,
+	},
+
+*/
