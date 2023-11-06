@@ -50,7 +50,16 @@ div.activeBox {
 	}
 }
 
+@media (min-width: 1200px) and (max-width: 1300px) {
+	.container {
+		padding: 0 5rem 7.2rem;
+	}
+}
+
 @media (min-width: 1550px) {
+	body {
+		overflow-x: hidden !important;
+	}
 	.App {
 		display: flex;
 		flex-direction: column;
