@@ -1,5 +1,24 @@
 export const exData = [
 	{
+		id: 2,
+		name: 'Frontend Freelancer',
+		type: 'Freelance',
+		about: {
+			date: 'January 2023 - present',
+			info: 'I have gained valuable experience working as a freelancer on various web development projects. I have collaborated with clients from diverse industries, helping them bring their ideas to life and achieve their online goals. I have worked on the frontend development for their websites from A to Z and fixing any issues or error in these websites.',
+			subTitle: 'Notable Projects',
+			list: [
+				'Build a portfolio website for an architecture engineer',
+				'Build a landing page for a business management comapny',
+				'Improving the design of a store on Salla platform by incorporating customized CSS and JavaScript code',
+			],
+		},
+		moreInfo: {
+			title: '',
+			text: '',
+		},
+	},
+	{
 		id: 3,
 		name: 'Frontend Developer',
 		type: 'Internship',
@@ -17,25 +36,6 @@ export const exData = [
 			title:
 				'Projects I worked on: <a style="color: #9149c4;" href="https://github.com/HossamMahmoudkhedr/CodeClauseInternship_to-do-list" target="_blank" rel="noreferrer" alt="To-do"> To-do list</a>, <a style="color: #9149c4;" href="https://github.com/HossamMahmoudkhedr/codeclauseinternship_timer_and_stopwatch" target="_blank" rel="noreferrer" alt="Timer and Stopwatch">Timer and Stopwatch</a>, <a style="color: #9149c4;" href="https://github.com/HossamMahmoudkhedr/codeclauseinternship_youtube-clone" target="_blank" rel="noreferrer" alt="Youtube Clone">Youtube Clone</a>, and <a style="color: #9149c4;" href="https://github.com/HossamMahmoudkhedr/codeclauseinternship_complete-survey-system" target="_blank" rel="noreferrer" alt="System survey">System survey</a>',
 			text: 'Offer Letter: <a style="color: #9149c4;" href="https://drive.google.com/file/d/1npXnQ4h0D30kRo5BeA83ge87fctsHtea/view" target="_blank" rel="noreferrer">Offer link</a>',
-		},
-	},
-	{
-		id: 2,
-		name: 'Frontend Freelancer',
-		type: 'Freelance',
-		about: {
-			date: 'January 2023 - present',
-			info: 'I have gained valuable experience working as a freelancer on various web development projects. I have collaborated with clients from diverse industries, helping them bring their ideas to life and achieve their online goals. I have worked on the frontend development for their websites from A to Z and fixing any issues or error in these websites.',
-			subTitle: 'Notable Projects',
-			list: [
-				'Build a portfolio website for an architecture engineer',
-				'Build a landing page for a business management comapny',
-				'Improving the design of a store on Salla platform by incorporating customized CSS and JavaScript code',
-			],
-		},
-		moreInfo: {
-			title: '',
-			text: '',
 		},
 	},
 ];

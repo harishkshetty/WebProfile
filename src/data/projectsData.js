@@ -2,6 +2,17 @@ import { icons } from '../utils/icons';
 
 export const projData = [
 	{
+		id: 10,
+		name: 'Msaknn Alenshaat',
+		describtion:
+			'Designed and Developed a website for a construction company, showcasing their portfolio of past projects, company information, and contact details. Additionally, highlighted the range of services offered by the company.',
+		languages: [icons.react, icons.mui, icons.css],
+		image: 'msakenn.png',
+		link: 'https://www.msakenn.com/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/masakin-alainshat',
+		done: true,
+	},
+	{
 		id: 1,
 		name: 'Theme Consulting',
 		describtion:
