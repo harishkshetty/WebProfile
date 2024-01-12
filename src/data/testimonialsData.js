@@ -18,6 +18,13 @@ export const testimonials = [
 	},
 	{
 		id: 3,
+		name: 'Tareq Alqahtani',
+		country: 'Saudi Arabia',
+		opinion: 'Beautiful job and very excellent service. May God bless you',
+		rate: [<Star />, <Star />, <Star />, <Star />, <Star />],
+	},
+	{
+		id: 4,
 		name: 'Nourhan Shakir',
 		country: 'Egypt',
 		opinion:

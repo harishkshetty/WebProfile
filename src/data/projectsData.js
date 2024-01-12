@@ -2,6 +2,17 @@ import { icons } from '../utils/icons';
 
 export const projData = [
 	{
+		id: 11,
+		name: 'Jadwala',
+		describtion:
+			'Created an effective website for a company that specializes in providing scheduling services. The website consists of five pages that fully meet customer needs, are easy to access, and come with a responsive experience on all screens.',
+		languages: [icons.html, icons.css, icons.tailwind, icons.javascript],
+		image: 'jadwala.png',
+		link: 'https://hossammahmoudkhedr.github.io/jadwala/',
+		gitLink: 'https://github.com/HossamMahmoudkhedr/jadwala',
+		done: true,
+	},
+	{
 		id: 10,
 		name: 'Msaknn Alenshaat',
 		describtion:

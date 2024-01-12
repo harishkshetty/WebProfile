@@ -8,6 +8,8 @@ import { ReactComponent as Bootstrap } from '../assets/icons/bootstrap.svg';
 import { ReactComponent as Sass } from '../assets/icons/sass.svg';
 import { ReactComponent as Git } from '../assets/icons/git-alt.svg';
 import { ReactComponent as Redux } from '../assets/icons/redux.svg';
+import { ReactComponent as Tailwind } from '../assets/icons/tailwind-css.svg';
+
 let height = '40px';
 let width = '50px';
 export const icons = {
@@ -72,6 +74,13 @@ export const icons = {
 	),
 	redux: (
 		<Redux
+			width={width}
+			height={height}
+			transform="scale(0.9)"
+		/>
+	),
+	tailwind: (
+		<Tailwind
 			width={width}
 			height={height}
 			transform="scale(0.9)"
