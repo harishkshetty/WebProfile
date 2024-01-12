@@ -64,9 +64,9 @@ export const projData = [
 			"Fine-tuned the visual aspects of the theme. Through CSS modifications, I optimized the typography, and color palette to align with the brand's identity. Integrated JavaScript enhancements to improve user interactions.",
 		languages: [icons.html, icons.javascript, icons.css],
 		image: 'Light-plus.png',
-		link: 'https://light-plus.co/',
+		link: '#',
 		gitLink: '#',
-		done: true,
+		done: false,
 	},
 	{
 		id: 5,
