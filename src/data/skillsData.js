@@ -37,6 +37,12 @@ export const skills = [
 		icon: icons.bootstrap,
 	},
 	{
+		id: 7,
+		name: 'TailwindCSS',
+		info: "Experienced in harnessing the power of the Tailwind CSS framework to craft responsive and mobile-friendly web interfaces. Proficient in utilizing Tailwind's utility-first approach, I create efficient and visually consistent designs across various screen sizes. Well-versed in Tailwind's extensive set of utility classes, I streamline development by rapidly implementing styles without compromising flexibility.",
+		icon: icons.tailwind,
+	},
+	{
 		id: 8,
 		name: 'Git',
 		info: 'Proficient in utilizing Git for version control and collaboration. Skilled in managing repositories, branching, merging, and resolving conflicts. Experienced in leveraging GitHub for project hosting, issue tracking, and contributing to open-source projects. Knowledgeable in Git workflows, including feature branching and pull request-based development.',
