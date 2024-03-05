@@ -25,6 +25,13 @@ export const testimonials = [
 	},
 	{
 		id: 4,
+		name: 'Hani Al-Sharari',
+		country: 'Saudi Arabia',
+		opinion: 'Very fast. He deserves 5 stars.',
+		rate: [<Star />, <Star />, <Star />, <Star />, <Star />],
+	},
+	{
+		id: 5,
 		name: 'Nourhan Shakir',
 		country: 'Egypt',
 		opinion:
