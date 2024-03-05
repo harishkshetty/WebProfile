@@ -5,8 +5,8 @@ export const projData = [
 		id: 12,
 		name: 'Waiter',
 		describtion:
-			"Created React and Material-UI-based website is a sophisticated platform featuring three dynamic landing pages dedicated to showcasing a state-of-the-art shopping app builder service. Integrating Material-UI's rich component library with React's robust architecture, the project delivers visually stunning and highly interactive user experiences.",
-		languages: [icons.react, icons.mui, icons.redux],
+			"Created React and Material-UI-based website is a sophisticated platform featuring three dynamic landing pages dedicated to showcasing a state-of-the-art shopping app builder service. Integrating Material-UI's rich component library with React's robust architecture.",
+		languages: [icons.react, icons.mui, icons.css],
 		image: 'waiter.png',
 		link: 'https://waiter-one.vercel.app/',
 		gitLink: 'https://github.com/HossamMahmoudkhedr/waiter',
