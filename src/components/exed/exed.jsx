@@ -35,10 +35,13 @@ const detailsVarinats = {
 };
 const Exed = () => {
 	const items = [
-		<ExperienceIcon className="back-icon" />,
+		<ExperienceIcon
+			className="back-icon"
+			style={{ right: '-55%', top: '-75%' }}
+		/>,
 		<EducationIcon
 			className="back-icon"
-			style={{ right: '-55%', top: '-68%' }}
+			style={{ right: '-45%', top: '-58%' }}
 		/>,
 	];
 
@@ -153,6 +156,7 @@ const Exed = () => {
 				sx={{
 					flexDirection: { xs: 'column', lg: 'row' },
 					gap: { xs: '2rem', lg: 'unset' },
+					alignItems: 'center',
 				}}>
 				<Stack
 					sx={{

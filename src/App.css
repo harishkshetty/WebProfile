@@ -36,8 +36,7 @@ div.activeBox {
 
 .back-icon {
 	position: absolute;
-	right: -55%;
-	top: -45%;
+
 	z-index: -1;
 	transform: scale(0.3);
 	fill: var(--icons-colors);
