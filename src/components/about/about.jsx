@@ -4,7 +4,7 @@ import Heading from '../../utils/heading';
 import CustomButton from '../../utils/customButton';
 import { styled } from 'styled-components';
 import { data } from '../../data/aboutData';
-import CV from '../../assets/CV/Hossam Mahmoud CV_Frontend.pdf';
+import CV from '../../assets/CV/HarishResume.pdf';
 import { motion } from 'framer-motion';
 
 const CustomizeStack = styled(Stack)`
@@ -112,7 +112,7 @@ const About = () => {
 						sx={{ fontSize: { xs: '16px', lg: '20px' } }}
 						className="gray-text">
 						<h3>
-							Hello, I'm Hossam
+							Hello, I'm Harish
 							<span
 								style={{
 									display: 'inline-block',
@@ -132,14 +132,14 @@ const About = () => {
 							</span>
 						</h3>
 						<p>
-							I'm a junior frontend developer with a passion for creating
+							I'm a Staff frontend developer with a passion for creating
 							engaging and user-friendly web experiences. With a solid
 							foundation in HTML, CSS, and JavaScript, I enjoy bringing designs
 							to life and building intuitive interfaces.
 						</p>
 						<p>
 							During my journey as a developer, I've gained experience in
-							working with modern frontend frameworks like React.js and have a
+							working with modern frontend frameworks like React.js,NextJs,Angular and have a
 							good understanding of responsive web design principles. I'm
 							constantly learning and exploring new technologies to enhance my
 							skills.
@@ -151,7 +151,7 @@ const About = () => {
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true }}
-						download="Hossam Mahmoud CV_Frontend"
+						download="Harish CV_Frontend"
 						target="_blank"
 						rel="noreferrer"
 						style={{ width: 'fit-content' }}>

@@ -117,7 +117,7 @@ const Home = () => {
 							animate="visible"
 							variant="h1"
 							sx={{ fontSize: '4rem', fontWeight: '700' }}>
-							Hossam Mahmoud
+							Harish
 						</Typography>
 						<Typography
 							component={motion.p}
@@ -155,7 +155,7 @@ const Home = () => {
 							width: '100%',
 						}}
 						src={PersonalImage}
-						alt="Hossam Mahmoud"
+						alt="Harish"
 					/>
 				</Box>
 			</Stack>

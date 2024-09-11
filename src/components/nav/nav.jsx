@@ -99,7 +99,6 @@ const Nav = () => {
 				position: 'relative',
 				zIndex: 1,
 			}}>
-			<Palestine />
 			<Stack
 				direction="row"
 				sx={{
