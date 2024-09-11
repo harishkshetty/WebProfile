@@ -80,7 +80,7 @@ const StarButton = () => {
 			animate={{ width: '40px' }}
 			transition={{ duration: 0.2 }}
 			whileHover={{ width: '95px' }}
-			href="https://github.com/HossamMahmoudkhedr/hossam_mahmoud_portfolio"
+			href="https://github.com/harishkshetty/WebProfile.git"
 			target="_blank"
 			re="noreferrer">
 			<StyledButton
