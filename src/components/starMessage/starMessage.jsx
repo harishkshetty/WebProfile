@@ -51,20 +51,14 @@ const StarMessage = ({ active }) => {
 	const [acitve, setActive] = useState(false);
 
 	useEffect(() => {
-		// let cookieValue = JSON.parse(Cookies.get('starred'));
-
-		if (Cookies.get('starred') == undefined) {
+		let cookieValue = JSON.parse(Cookies.get('starred'));
+		if (!cookieValue) {
 			setTimeout(() => {
 				setActive(true);
 			}, 15000);
 		}
 	}, []);
 	const handleClick = () => {
-		setActive(false);
-	};
-
-	const close = () => {
-		Cookies.set('starred', true, { expires: 365 * 10 });
 		setActive(false);
 	};
 	return (
@@ -81,13 +75,7 @@ const StarMessage = ({ active }) => {
 				<Typography variant="body1">
 					If you liked my portfolio, Give me a star to my repository
 				</Typography>
-				<a
-					href="https://github.com/HossamMahmoudkhedr/hossam_mahmoud_portfolio"
-					target="_blank"
-					re="noreferrer"
-					onClick={close}>
-					<StarButton />
-				</a>
+				<StarButton />
 			</Stack>
 		</StyledMessage>
 	);
