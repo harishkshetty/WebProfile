@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import Nav from '../nav/nav';
-import PersonalImage from '../../assets/images/IMG_yphqhh222-removebg.png';
+import PersonalImage from '../../assets/images/Profile.image.jpeg';
 import CustomButton from '../../utils/customButton';
 import { motion } from 'framer-motion';
 const myVariants = {
