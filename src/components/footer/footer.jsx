@@ -97,7 +97,7 @@ const Footer = () => {
 			<Typography
 				variant="overline"
 				color="var(--white-text)">
-				© Copyright {year} - Hossam Mahmoud
+				© Copyright {year} - Harish K Shetty
 			</Typography>
 		</Box>
 	);

@@ -1,4 +1,4 @@
-# Hossam Mahmoud Portfolio
+# Harish K Shetty Portfolio
 
 This is my portfolio website showcasing my frontend development projects, experience, skills and, much more.
 
@@ -70,10 +70,10 @@ This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LI
 
 Feel free to reach out to me:
 
-- Website: [Hossam Mahmoud](https://hossam-mahmoud-portfolio.vercel.app/)
-- GitHub: [@HossamMahmoudKhedr](https://github.com/HossamMahmoudkhedr)
-- LinkedIn: [Hossam Mahmoud](https://www.linkedin.com/in/hossam-mahmoud/)
-- Email: hossamkheder9999@gmail.com
+- Website: [Harish k shetty](https://www.harishkshetty.dev)
+- GitHub: [@harishkshetty](https://github.com/harishkshetty)
+- LinkedIn: [Harish k shetty](https://www.linkedin.com/in/harish-k-shetty-007a3892/)
+- Email: harishkshetty7@gmail.com
 
 Let's connect and discuss your next project!
 

@@ -3,7 +3,7 @@ export const data = [
 	{
 		id: 1,
 		name: 'Name',
-		value: 'Hossam Mahmoud',
+		value: 'Harish K Shetty',
 	},
 	{
 		id: 2,
@@ -13,16 +13,16 @@ export const data = [
 	{
 		id: 3,
 		name: 'Email',
-		value: 'hossamkheder9999@gmail.com',
+		value: 'harishkshetty7@gmail.com',
 	},
 	{
 		id: 4,
 		name: 'Phone',
-		value: '+20 120 137 2503',
+		value: '+65 88926844',
 	},
 	{
 		id: 5,
 		name: 'Country',
-		value: 'Egypt',
+		value: 'Singapore',
 	},
 ];

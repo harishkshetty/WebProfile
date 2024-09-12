@@ -113,7 +113,7 @@ const Nav = () => {
 						<img
 							style={{ paddingTop: '5px' }}
 							src={LogoImage}
-							alt="Hossam Mahmoud"
+							alt="Harish"
 						/>
 					</a>
 				</Box>
