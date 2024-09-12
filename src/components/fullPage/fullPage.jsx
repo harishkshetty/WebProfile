@@ -6,7 +6,6 @@ import Services from '../services/services';
 import Exed from '../exed/exed';
 import Work from '../work/work';
 import Skills from '../skills/skills';
-import Testimonials from '../testimonials/testimonial';
 import Footer from '../footer/footer';
 const FullPage = () => {
 	return (
@@ -17,7 +16,6 @@ const FullPage = () => {
 			<Exed />
 			<Work />
 			<Skills />
-			<Testimonials />
 			<Footer />
 		</Box>
 	);
