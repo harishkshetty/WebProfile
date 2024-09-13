@@ -1,11 +1,8 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import LogoImage from '../../assets/images/Logo.png';
-import Upwork from '../../assets/icons/upwork 1.svg';
 import Linkedin from '../../assets/icons/linkedin.svg';
 import Github from '../../assets/icons/github2.svg';
-import Twitter from '../../assets/icons/twitter.svg';
-import Mostaql from '../../assets/icons/Mostaql.svg';
 import WhatsApp from '../../assets/icons/whatsapp.svg';
 
 const Footer = () => {
@@ -30,7 +27,7 @@ const Footer = () => {
 						<img
 							width="55px"
 							src={LogoImage}
-							alt="Hossam Mahmoud"
+							alt="Harish"
 						/>
 					</a>
 				</Box>
@@ -39,16 +36,7 @@ const Footer = () => {
 					alignItems="center"
 					gap="1rem">
 					<a
-						href="https://www.upwork.com/freelancers/~01857fa5e4b8390d71"
-						target="_blank"
-						rel="noreferrer">
-						<img
-							src={Upwork}
-							alt="Hire me on UpWork"
-						/>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/hossam-mahmoud/"
+						href="https://www.linkedin.com/in/harish-k-shetty-007a3892/"
 						target="_blank"
 						rel="noreferrer">
 						<img
@@ -57,7 +45,7 @@ const Footer = () => {
 						/>
 					</a>
 					<a
-						href="https://wa.me/+201201372503?"
+						href="https://wa.me/+917448619380?"
 						target="_blank"
 						rel="noreferrer">
 						<img
@@ -66,30 +54,12 @@ const Footer = () => {
 						/>
 					</a>
 					<a
-						href="https://github.com/HossamMahmoudkhedr"
+						href="https://github.com/harishkshetty"
 						target="_blank"
 						rel="noreferrer">
 						<img
 							src={Github}
 							alt="GitHub"
-						/>
-					</a>
-					<a
-						href="https://twitter.com/HossamKhedr01"
-						target="_blank"
-						rel="noreferrer">
-						<img
-							src={Twitter}
-							alt="Twitter"
-						/>
-					</a>
-					<a
-						href="https://mostaql.com/u/Hossam_Mahmoud4"
-						target="_blank"
-						rel="noreferrer">
-						<img
-							src={Mostaql}
-							alt="Hire me on Mostaql"
 						/>
 					</a>
 				</Stack>
