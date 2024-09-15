@@ -6,11 +6,6 @@ export const data = [
 		value: 'Harish K Shetty',
 	},
 	{
-		id: 2,
-		name: 'Age',
-		value: birthDate,
-	},
-	{
 		id: 3,
 		name: 'Email',
 		value: 'harishkshetty7@gmail.com',

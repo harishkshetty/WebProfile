@@ -24,11 +24,36 @@ const Footer = () => {
 				gap="1rem">
 				<Box>
 					<a href="/">
-						<img
-							width="55px"
-							src={LogoImage}
-							alt="Harish"
-						/>
+					<svg width="54" height="54" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradientHS" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#ff9a8d" stopOpacity="1" />
+        <stop offset="100%" stopColor="#ff9a8d" stopOpacity="1" />
+      </linearGradient>
+    </defs>
+    <text
+      x="5"
+      y="35"
+      fontSize="40"
+      fontFamily="Arial"
+      fill="url(#gradientHS)"
+      stroke="black"
+      strokeWidth="1"
+    >
+      H
+    </text>
+    <text
+      x="25"
+      y="35"
+      fontSize="40"
+      fontFamily="Arial"
+      fill="url(#gradientHS)"
+      stroke="black"
+      strokeWidth="1"
+    >
+      S
+    </text>
+  </svg>
 					</a>
 				</Box>
 				<Stack

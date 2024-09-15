@@ -131,24 +131,6 @@ const Work = () => {
 											disabled={!project.done}
 										/>
 									</a>
-									<a
-										href={project.gitLink}
-										target="_blank"
-										rel="noreferrer"
-										style={{
-											width: { xs: '100%', lg: 'fit-content' },
-											marginTop: '0px',
-											pointerEvents: project.gitLink === '#' ? 'none' : '',
-										}}>
-										<CustomButton
-											content="Learn more"
-											beforeWidth={'0%'}
-											beforeBgColorHover="var(--red-text)"
-											hoverColor="black"
-											textColor="var(--white-text)"
-											disabled={project.gitLink === '#' ? true : false}
-										/>
-									</a>
 								</Stack>
 							</Stack>
 							<Stack

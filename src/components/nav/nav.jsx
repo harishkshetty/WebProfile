@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Stack } from '@mui/material';
-import LogoImage from '../../assets/images/Logo.png';
+// import LogoImage from '../../assets/images/Logo.svg';
 import { styled } from 'styled-components';
 import { motion } from 'framer-motion';
-import Palestine from '../palestine/palestine';
 
 const Sytledlinks = styled.ul`
 	display: flex;
@@ -110,11 +109,42 @@ const Nav = () => {
 					className="logo"
 					sx={{ transform: 'scale(1.2)' }}>
 					<a href="/">
-						<img
+						{/* <img
 							style={{ paddingTop: '5px' }}
 							src={LogoImage}
 							alt="Harish"
-						/>
+						/> */}   
+<svg width="54" height="54" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradientHS" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#ff9a8d" stopOpacity="1" />
+        <stop offset="100%" stopColor="#ff9a8d" stopOpacity="1" />
+      </linearGradient>
+    </defs>
+    <text
+      x="5"
+      y="35"
+      fontSize="40"
+      fontFamily="Arial"
+      fill="url(#gradientHS)"
+      stroke="black"
+      strokeWidth="1"
+    >
+      H
+    </text>
+    <text
+      x="25"
+      y="35"
+      fontSize="40"
+      fontFamily="Arial"
+      fill="url(#gradientHS)"
+      stroke="black"
+      strokeWidth="1"
+    >
+      S
+    </text>
+  </svg>
+
 					</a>
 				</Box>
 				<MenuContainer onClick={handleMenuClick}>
@@ -154,13 +184,6 @@ const Nav = () => {
 					</li>
 					<li>
 						<SytledlinksItems
-							href="#services"
-							onClick={handleLinkClick}>
-							Services
-						</SytledlinksItems>
-					</li>
-					<li>
-						<SytledlinksItems
 							href="#exed"
 							onClick={handleLinkClick}>
 							Experience & Education
@@ -178,13 +201,6 @@ const Nav = () => {
 							href="#skills"
 							onClick={handleLinkClick}>
 							Skills
-						</SytledlinksItems>
-					</li>
-					<li>
-						<SytledlinksItems
-							href="#testimonials"
-							onClick={handleLinkClick}>
-							Testimonials
 						</SytledlinksItems>
 					</li>
 					<li>
