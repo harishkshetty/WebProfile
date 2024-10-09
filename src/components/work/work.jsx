@@ -145,7 +145,6 @@ const Work = () => {
 									style={{
 										width: '100%',
 										objectFit: 'cover',
-										transform: 'scale(1.3)',
 									}}
 								/>
 							</Stack>
